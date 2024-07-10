@@ -158,6 +158,11 @@
     font-weight: 500;
     line-height: 19.36px;
  }
+
+ .catalogMain>div button:hover:not(.active1) {
+    background-color: #eee;
+    cursor: pointer;
+ }
  
  
  .catalogMain>div button.active1 {

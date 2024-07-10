@@ -6,7 +6,7 @@ function OutletCatalog() {
     <div className="catalogMain">
                 <div>
                     <p>
-                        <span>Главная <span>///</span></span>
+                        <span>Главная </span><span> /// </span>  
                         Каталог люстр
                     </p>
                     <h1>

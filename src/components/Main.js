@@ -1,104 +1,39 @@
 
-import ellipce from "./images/Ellipse 1322.svg"
-import menu from "./images/menu.svg"
-import hero from "./images/heroImg.svg"
-import logo from "./images/logo.svg"
-import ellipc1 from "./images/Ellipse 1.png"
-import ellipc2 from "./images/Ellipse 2.png"
-import ellipc3 from "./images/Ellipse 3.png"
-import ellipc4 from "./images/Ellipse 4.svg"
-import ellipc5 from "./images/Ellipse 5.svg"
-import ellipc6 from "./images/Ellipse 6.svg"
-import ret1 from "./images/Rectangle 1.svg"
-import ret2 from "./images/Rectangle 2.svg"
-import ret3 from "./images/Rectangle 3.svg"
-import ret4 from "./images/Rectangle 4.svg"
-import ret5 from "./images/Rectangle 5.svg"
-import ret6 from "./images/Rectangle 6.svg"
-import ret7 from "./images/Rectangle 7.svg"
-import ret8 from "./images/Rectangle 8.svg"
 import icons1 from "./images/Icons.svg"
 import icons2 from "./images/Icons1.svg"
 import icons3 from "./images/Icons3.svg"
 import group from "./images/Group.svg"
 import group1 from "./images/Group1.svg"
 import group2 from "./images/Group2.svg"
+import Lamps from "./Lamps"
+import { useState } from "react"
+import Chandelier from "./Chandelier"
 
 function Main() {
+     const [chandeliers, setChandeliers] = useState(false)
+     const [lamps, setLamps] = useState(true)
+
+     const chandelier = () => {
+          setChandeliers(true)
+          setLamps(false)
+     }
+
+     const lamp = () => {
+          setLamps(true)
+
+          setChandeliers(false) 
+     }
+
      return (
-          <div className="main1">
-               <div className="background1">
-                    <div className="backfon">
-                         <div className="fontop">
-                              <img src={ellipce} alt="alp" className="fonbottom" />
-                         </div>
-
-                         <img src={hero} alt="hero" className="hero" />
-
-
-                         <div className="header">
-                              <img src={logo} alt="logo" className="left abs1" />
-                              <a className="left menu abs2">
-                                   <img src={menu} alt="menu" />
-                                   Каталог продуктов
-                              </a>
-
-                              <a className="left abs4">
-                                   Услуги
-                              </a>
-                              <a className="left abs5">
-                                   Контакты
-                              </a>
-                              <div className="hug right abs6">
-                                   Получить консултацию
-                              </div>
-                         </div>
-
-                         <div className="main">
-                              <h1 className="abs7">
-                                   MORGANA OVAL
-                              </h1>
-                              <p className="abs8">
-                                   The question isn't who is going to let me. It's who is going to stop me.
-                              </p>
-                              <div className="abs9 hug1">
-                                   Подробнее
-                              </div>
-                         </div>
-                         <h1 className="abs10">
-                              3 200 000.00 UZS
-                         </h1>
-                         <p className="abs11">
-                              The question isn't who is going to let me. It's who is going to stop me.
-                         </p>
-
-                         <div className="ellipses">
-                              <div className="alp1">
-                                   <div></div>
-                                   <img src={ellipc1} alt="elpp" />
-                              </div>
-                              <div className="alp2">
-                                   <div></div>
-                                   <img src={ellipc2} alt="elpp" />
-                              </div>
-                              <div className="alp3">
-                                   <div></div>
-                                   <img src={ellipc3} alt="elpp"/>
-                              </div>
-                              <img src={ellipc4} alt="elpp" className="alp4" />
-                              <img src={ellipc5} alt="elpp" className="alp5" />
-                              <img src={ellipc6} alt="elpp" className="alp6" />
-                         </div>
-
-                    </div>
-               </div>
+          <>           
                <div className="background2">
                     <div className="container2">
                          <h1 className="text1">
                               Наше новые продукты
                          </h1>
                          <div className="menuDiv">
-                              <button>
+                              <button className={chandeliers ? "active" : ""}
+                               onClick={chandelier}>
                                    Люстры
                               </button>
                               <button>
@@ -124,147 +59,16 @@ function Main() {
                               <button>
                                    Уличные
                               </button>
-                              <button className="active">
+                              <button className={lamps ? "active" : ""}
+                                   onClick={lamp}>
                                    Лампы
                               </button>
                               <button>
                                    Акции
                               </button>
                          </div>
-                         <div className="katalogDiv">
-                              <div className="card">
-                                   <div className="center">
-                                        <img src={ret1} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div className="center">
-                                        <img src={ret2} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div>
-                                        <img src={ret3} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div>
-                                        <img src={ret4} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div className="center">
-                                        <img src={ret5} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div>
-                                        <img src={ret6} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div>
-                                        <img src={ret7} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div>
-                                        <img src={ret8} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div className="center">
-                                        <img src={ret2} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div>
-                                        <img src={ret7} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div>
-                                        <img src={ret4} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                              <div className="card">
-                                   <div>
-                                        <img src={ret5} alt="rtgl" />
-                                   </div>
-                                   <p>
-                                        Ковер Electra 8514 серый
-                                   </p>
-                                   <p className="sum">
-                                        от 999 000 сум
-                                   </p>
-                              </div>
-                         </div>
+                         {lamps && <Lamps/>}
+                         {chandeliers && <Chandelier/>}
                          <div className="text2">
                               Посмотреть все
                          </div>
@@ -383,7 +187,7 @@ function Main() {
                          </p>
                     </div>
                </div>
-          </div>
+          </>
      )
 }
 

@@ -119,6 +119,7 @@ function About() {
                     </button>
                 </div>
                 <div className="desctext">
+                    {active_1_1 && 
                     <p>
                     Таким образом, в дополнение к работе с различными предложениями, 
                     которые часто влияют на дизайнерские решения в электронной коммерции, 
@@ -126,10 +127,24 @@ function About() {
                     очень инновационный и узкоспециализированный продукт в эмоциональной, 
                     увлекательной и инклюзивной форме. Он взял на себя задачу создать дизайн, 
                     который выделял бы бренд из толпы, и применить его в высококонкурентном обществе.
-                    </p>
+                    </p>}
+                    {active_2_2 && 
                     <p>
-
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cum perferendis 
+                        repudiandae voluptatum deleniti quidem dignissimos, sint blanditiis eaque rem maxime 
+                        harum ad maiores nesciunt beatae corrupti laborum ut placeat ipsa, voluptate veniam 
+                        suscipit ipsam quos! Ut unde nobis ullam!
+                    </p>}
+                    {active_3_3 &&
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dicta hic eum, 
+                        aliquam unde laborum? Possimus deleniti quidem impedit itaque eos, nisi quo animi 
+                        consectetur atque sed laudantium sequi fugiat doloremque nemo? Rem exercitationem 
+                        repellat ut ratione tempora distinctio perspiciatis. Minus assumenda voluptates totam, 
+                        quam autem expedita! Reiciendis, officiis sapiente.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, odit!
                     </p>
+                    }
                 </div>
             </div>
         </>

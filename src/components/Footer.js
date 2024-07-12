@@ -1,59 +1,13 @@
-import "./Catalog.css"
-import menuDark from "../images/menuDark.svg"
-import logoDark from "../images/logoDark.svg"
-import vector from "../images/Vector.svg"
-import clock from "../images/icon_clock.svg"
-import location from "../images/location_icon.svg"
-import email from "../images/mail_icon.svg"
-import phone from "../images/phone_icon.svg"
-import arwbtm from "../images/arrowbottom.svg"
-import { NavLink, Outlet, useNavigate } from "react-router-dom"
-function Catalog() {
+import React from 'react'
+import clock from "../pages/images/icon_clock.svg"
+import location from "../pages/images/location_icon.svg"
+import email from "../pages/images/mail_icon.svg"
+import phone from "../pages/images/phone_icon.svg"
+import arwbtm from "../pages/images/arrowbottom.svg"
 
-
-    const navigate = useNavigate()
-
-    const naviget = () => {
-        navigate("/", { replace: true })
-    }
-
-    return (
-        <div className="catalog">
-            <div className="catalogDiv">
-                <div className="catalogHeader">
-                    <div>
-                        <div>
-                            <NavLink className="nav flexnav">
-                                <img src={menuDark} alt="menuDark" />
-                                Каталог продуктов
-                            </NavLink>
-
-                            <NavLink className="nav">
-                                Услуги
-                            </NavLink>
-                            <NavLink className="nav">
-                                Контакты
-                            </NavLink>
-                        </div>
-                    </div>
-                    <div className="darklogo" onClick={naviget}>
-                        <img src={logoDark} alt="logo" />
-                        <img src={vector} alt="vec" className="vector" />
-                    </div>
-                    <div>
-                        <p>
-                            Приём звонков 24/7
-                        </p>
-                        <p>
-                            +998 90 000 00 00
-                        </p>
-                    </div>
-                </div>
-                <div className="hr">
-                </div>
-                <Outlet />
-            </div>
-            <div className="footer">
+function Footer() {
+  return (
+    <div className="footer">
                 <div className="insidefooter">
                     <div className="lyustr">
                         <h2>
@@ -128,8 +82,7 @@ function Catalog() {
 
                 </div>
             </div>
-        </div>
-    )
+  )
 }
 
-export default Catalog
+export default Footer

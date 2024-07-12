@@ -63,7 +63,7 @@ a:hover {
    height: 1700px;
    width: 1700px;
    top: -450px;
-   animation: mymove 5.5s infinite alternate-reverse;
+   animation: mymove 4s infinite alternate-reverse;
    animation-timing-function: ease-in-out;
    box-shadow: 60px 0 5px rgba(118, 3, 232, 0.4);
    filter: blur(35px);
@@ -175,7 +175,7 @@ a:hover {
    height: 579px;
    position: absolute;
    top: 40px;
-   animation: mymove2 5.5s infinite alternate-reverse;
+   animation: mymove2 4s infinite alternate-reverse;
    animation-timing-function: ease-in-out;
 }
 
@@ -287,7 +287,7 @@ a:hover {
    width: 90px;
    height: 90px;
    border-radius: 50%;
-   background-image: url("./components/images/Ellipse\ 1_1.png");
+   background-image: url("./pages/images/Ellipse\ 1_1.png");
    z-index: 1;
 }
 
@@ -320,7 +320,7 @@ a:hover {
    width: 90px;
    height: 90px;
    border-radius: 50%;
-   background-image: url("./components/images/Ellipse\ 2_2.png");
+   background-image: url("./pages/images/Ellipse\ 2_2.png");
    z-index: 1;
 }
 
@@ -352,7 +352,7 @@ a:hover {
    width: 90px;
    height: 90px;
    border-radius: 50%;
-   background-image: url("./components/images/Ellipse\ 3_3.png");
+   background-image: url("./pages/images/Ellipse\ 3_3.png");
    z-index: 1;
 }
 
@@ -384,7 +384,7 @@ a:hover {
    width: 90px;
    height: 90px;
    border-radius: 50%;
-   background-image: url("./components/images/Ellipse\ 4_4.png");
+   background-image: url("./pages/images/Ellipse\ 4_4.png");
    z-index: 1;
 }
 
@@ -416,7 +416,7 @@ a:hover {
    width: 90px;
    height: 90px;
    border-radius: 50%;
-   background-image: url("./components/images/Ellipse\ 5_5.png");
+   background-image: url("./pages/images/Ellipse\ 5_5.png");
    z-index: 1;
 }
 
@@ -448,7 +448,7 @@ a:hover {
    width: 90px;
    height: 90px;
    border-radius: 50%;
-   background-image: url("./components/images/Ellipse\ 6_6.png");
+   background-image: url("./pages/images/Ellipse\ 6_6.png");
    z-index: 1;
 }
 

@@ -21,7 +21,7 @@ function Chandeliers() {
     const navigate = useNavigate()
 
     const naviget = () => {
-        navigate("about", { replace: true })
+        navigate("/about", { replace: true })
     }
 
   return (

@@ -16,7 +16,6 @@ function Home() {
 
      return (
           <>
-
                <div className="background1">
                     <div className="backfon">
                          <div className="fontop">

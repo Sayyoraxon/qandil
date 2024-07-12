@@ -12,34 +12,41 @@ import ellipc5 from "./images/Ellipse 5.png"
 import ellipc6 from "./images/Ellipse 6.png"
 
 function Home() {
-  return (
-    <>
 
-<div className="background1">
+
+     return (
+          <>
+
+               <div className="background1">
                     <div className="backfon">
                          <div className="fontop">
-                              
+
                               <img src={ellipce} alt="alp" className="fonbottom" />
                          </div>
 
-                         <div  className="hero">
+                         <div className="hero">
                               <div className="vector1"></div>
                               <img src={hero} alt="hero" />
                          </div>
 
-                         <div className="header">
-                              <img src={logo} alt="logo" className="left abs1" />
-                              <NavLink to="catalog" className="left menu abs2">
-                                   <img src={menu} alt="menu" />
-                                   Каталог продуктов
-                              </NavLink>
+                         <div className="header flex">
+                              <div className='flex'>
+                              <img src={logo} alt="logo" className="abs1" />
 
-                              <a className="left abs4">
-                                   Услуги
-                              </a>
-                              <a className="left abs5">
-                                   Контакты
-                              </a>
+                              <nav className='height21'>
+                                   <NavLink to="catalog" className="menu abs2">
+                                        <img src={menu} alt="menu" />
+                                        Каталог продуктов
+                                   </NavLink>
+
+                                   <NavLink className="left abs4">
+                                        Услуги
+                                   </NavLink>
+                                   <NavLink className="left abs5">
+                                        Контакты
+                                   </NavLink>
+                              </nav>
+                              </div>
                               <div className="hug right abs6">
                                    Получить консултацию
                               </div>
@@ -74,27 +81,27 @@ function Home() {
                               </div>
                               <div className="alp3">
                                    <div></div>
-                                   <img src={ellipc3} alt="elpp"/>
+                                   <img src={ellipc3} alt="elpp" />
                               </div>
                               <div className="alp4">
                                    <div></div>
-                                   <img src={ellipc4} alt="elpp"/>
-                              </div> 
+                                   <img src={ellipc4} alt="elpp" />
+                              </div>
                               <div className="alp5">
                                    <div></div>
-                                   <img src={ellipc5} alt="elpp"/>
-                              </div> 
+                                   <img src={ellipc5} alt="elpp" />
+                              </div>
                               <div className="alp6">
                                    <div></div>
-                                   <img src={ellipc6} alt="elpp"/>
-                              </div>  
+                                   <img src={ellipc6} alt="elpp" />
+                              </div>
                          </div>
 
                     </div>
                </div>
-        <Outlet/>
-    </>
-  )
+               <Outlet />
+          </>
+     )
 }
 
 export default Home

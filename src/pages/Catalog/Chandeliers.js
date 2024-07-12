@@ -70,18 +70,18 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl2} alt="rtgl" />
                             </div>
                             <p>
                                 Ковер Electra 8514 серый
                             </p>
-                            <p className="colored">
+                            <p className="colored" onClick={naviget}>
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl3} alt="rtgl" />
                             </div>
@@ -92,18 +92,18 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl4} alt="rtgl" />
                             </div>
                             <p>
                                 Ковер Electra 8514 серый
                             </p>
-                            <p className="colored">
+                            <p className="colored" >
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl5} alt="rtgl" />
                             </div>
@@ -114,7 +114,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl6} alt="rtgl" />
                             </div>
@@ -125,7 +125,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl7} alt="rtgl" />
                             </div>
@@ -136,7 +136,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl8} alt="rtgl" />
                             </div>
@@ -147,7 +147,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl9} alt="rtgl" />
                             </div>
@@ -158,7 +158,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl10} alt="rtgl" />
                             </div>
@@ -169,7 +169,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl11} alt="rtgl" />
                             </div>
@@ -180,7 +180,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl12} alt="rtgl" />
                             </div>
@@ -191,7 +191,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl1} alt="rtgl" />
                             </div>
@@ -202,7 +202,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl2} alt="rtgl" />
                             </div>
@@ -213,7 +213,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl3} alt="rtgl" />
                             </div>
@@ -224,7 +224,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl4} alt="rtgl" />
                             </div>
@@ -235,7 +235,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl5} alt="rtgl" />
                             </div>
@@ -246,7 +246,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl6} alt="rtgl" />
                             </div>
@@ -257,7 +257,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl7} alt="rtgl" />
                             </div>
@@ -268,7 +268,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl8} alt="rtgl" />
                             </div>
@@ -279,7 +279,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl9} alt="rtgl" />
                             </div>
@@ -290,7 +290,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl10} alt="rtgl" />
                             </div>
@@ -301,7 +301,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl11} alt="rtgl" />
                             </div>
@@ -312,7 +312,7 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card">
+                        <div className="div1card" onClick={naviget}>
                             <div className="center">
                                 <img src={rtgl12} alt="rtgl" />
                             </div>

@@ -2,6 +2,10 @@ import "./About.css"
 import rtgl3 from "../images/Rectangle 3_1.png"
 import rtgl3_3 from "../images/Rectangle 3_3.png"
 import rtgl3_2 from "../images/Rectangle 3_2.png"
+import rtgl13 from "../images/Rectangle 13.png"
+import rtgl14 from "../images/Rectangle 14.png"
+import rtgl15 from "../images/Rectangle 15.png"
+import rtgl16 from "../images/Rectangle 16.png"
 import share from "../images/Icons/share.svg"
 import { useState } from "react"
 
@@ -16,7 +20,11 @@ function About() {
     const [active_3_3, setActive_3_3] = useState(false)
 
 
+    const text1 = "Таким образом, в дополнение к работе с различными предложениями, которые часто влияют на дизайнерские решения в электронной коммерции, на этот раз перед нашей командой была поставлена ​​задача представить очень инновационный и узкоспециализированный продукт в эмоциональной, увлекательной и инклюзивной форме. Он взял на себя задачу создать дизайн, который выделял бы бренд из толпы, и применить его в высококонкурентном обществе."
+    const text2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est optio accusantium et suscipit mollitia maxime repudiandae aliquid velit sint dolor cumque ea, architecto sapiente, quidem rem alias praesentium reprehenderit quaerat eveniet repellat eaque voluptatem ab aspernatur? Nemo vero ut eos."
+    const text3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est optio accusantium et suscipit mollitia maxime repudiandae aliquid velit sint dolor cumque ea, architecto sapiente, quidem rem alias praesentium reprehenderit quaerat eveniet repellat eaque voluptatem ab aspernatur? Nemo vero ut eos. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 
+    const [text, settext] = useState(text1)
     return (
         <>
             <p class="title">
@@ -95,6 +103,7 @@ function About() {
                             setActive_1_1(true)
                             setActive_2_2(false)
                             setActive_3_3(false)
+                            settext(text1)
                         }}
                     >
                         Описание продукта
@@ -104,6 +113,7 @@ function About() {
                             setActive_2_2(true)
                             setActive_1_1(false)
                             setActive_3_3(false)
+                            settext(text2)
                         }}
                     >
                         Как заказать
@@ -113,38 +123,83 @@ function About() {
                             setActive_3_3(true)
                             setActive_1_1(false)
                             setActive_2_2(false)
+                            settext(text3)
                         }}
                     >
                         Доставка и оплата
                     </button>
                 </div>
                 <div className="desctext">
-                    {active_1_1 && 
+
                     <p>
-                    Таким образом, в дополнение к работе с различными предложениями, 
-                    которые часто влияют на дизайнерские решения в электронной коммерции, 
-                    на этот раз перед нашей командой была поставлена ​​задача представить 
-                    очень инновационный и узкоспециализированный продукт в эмоциональной, 
-                    увлекательной и инклюзивной форме. Он взял на себя задачу создать дизайн, 
-                    который выделял бы бренд из толпы, и применить его в высококонкурентном обществе.
-                    </p>}
-                    {active_2_2 && 
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cum perferendis 
-                        repudiandae voluptatum deleniti quidem dignissimos, sint blanditiis eaque rem maxime 
-                        harum ad maiores nesciunt beatae corrupti laborum ut placeat ipsa, voluptate veniam 
-                        suscipit ipsam quos! Ut unde nobis ullam!
-                    </p>}
-                    {active_3_3 &&
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dicta hic eum, 
-                        aliquam unde laborum? Possimus deleniti quidem impedit itaque eos, nisi quo animi 
-                        consectetur atque sed laudantium sequi fugiat doloremque nemo? Rem exercitationem 
-                        repellat ut ratione tempora distinctio perspiciatis. Minus assumenda voluptates totam, 
-                        quam autem expedita! Reiciendis, officiis sapiente.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, odit!
+                        {text}
                     </p>
-                    }
+
+                </div>
+
+                <div className="recommendation">
+                    <h2>
+                        Мы реккомендуем
+                    </h2>
+                    <div className="hidden">
+                        <div className="cardsDiv">
+                            <div className="cardDiv2">
+                                <div className="center">
+                                    <img src={rtgl13} alt="rtgl" />
+                                </div>
+                                <p>
+                                    Ковер Electra 8514 серый
+                                </p>
+                                <p className="colored">
+                                    от 999 000 сум
+                                </p>
+                            </div>
+                            <div className="cardDiv2">
+                                <div className="center">
+                                    <img src={rtgl14} alt="rtgl" />
+                                </div>
+                                <p>
+                                    Ковер Electra 8514 серый
+                                </p>
+                                <p className="colored">
+                                    от 999 000 сум
+                                </p>
+                            </div>
+                            <div className="cardDiv2">
+                                <div className="center">
+                                    <img src={rtgl15} alt="rtgl" />
+                                </div>
+                                <p>
+                                    Ковер Electra 8514 серый
+                                </p>
+                                <p className="colored">
+                                    от 999 000 сум
+                                </p>
+                            </div>
+                            <div className="cardDiv2">
+                                <div className="center">
+                                    <img src={rtgl16} alt="rtgl" />
+                                </div>
+                                <p>
+                                    Ковер Electra 8514 серый
+                                </p>
+                                <p className="colored">
+                                    от 999 000 сум
+                                </p>
+                            </div>
+                            <div className="cardDiv2">
+                                <div className="center">
+                                    <img src={rtgl15} alt="rtgl" />
+                                </div>
+                                <p>
+                                    Ковер Electra 8514 серый
+                                </p>
+                                <p className="colored">
+                                    от 999 000 сум
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

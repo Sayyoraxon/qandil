@@ -245,7 +245,7 @@
    overflow: hidden;
 }
 
-.div1card p {
+.div1card p, .cardDiv2 p {
    font-family: "Inter", sans-serif;
    font-size: 17px;
    font-weight: 600;

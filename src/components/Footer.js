@@ -11,7 +11,7 @@ function Footer() {
                 <div className="insidefooter">
                     <div className="lyustr">
                         <h2>
-                            Lyustrus
+                            Обои
                         </h2>
                         <p>
                             Следите за новостями на нашем сайте и тогда

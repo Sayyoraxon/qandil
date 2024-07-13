@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import icons from "../images/icons.png"
+import icons from "../images/Icons.svg"
 import rtgl1 from "../images/Rectangle_1.png"
 import rtgl2 from "../images/Rectangle_2.png"
 import rtgl3 from "../images/Rectangle_3.png"
@@ -14,9 +14,14 @@ import rtgl11 from "../images/Rectangle_11.png"
 import rtgl12 from "../images/Rectangle_12.png"
 import { useNavigate } from 'react-router-dom'
 
-function Chandeliers() {
+function Chandeliers({setImg}) {
 
     const [height, setHeight] = useState("1940px")
+    const [size, setSize] = useState(false)
+    const [color, setColor] = useState(false)
+    const [style, setStyle] = useState(false)
+    const [form, setForm] = useState(false)
+    const [compound, setCompound] = useState(false)
 
     const navigate = useNavigate()
 
@@ -27,39 +32,107 @@ function Chandeliers() {
   return (
     <div className="width925">
                     <div className="catalogmenunav">
-                        <div>
+                        <div className='menudiv'>
                             <p>
                                 По размерам
                             </p>
-                            <img src={icons} alt="icon" />
+                            <img src={icons} alt="icon" 
+                            onClick={()=>setSize(!size)}/>
+                           {size && 
+                           <div>
+                                <p>
+                                    По размерам
+                                </p>
+                                <p>
+                                    По размерам
+                                </p>
+                                <p>
+                                    По размерам
+                                </p>
+                            </div> }
                         </div>
-                        <div>
+                        <div className='menudiv'>
                             <p>
                                 По цвету
                             </p>
-                            <img src={icons} alt="icon" />
+                            <img src={icons} alt="icon" 
+                            onClick={()=>setColor(!color)}/>
+                            {color  && 
+                            <div>
+                                <p>
+                                По цвету
+                                </p>
+                                <p>
+                                По цвету
+                                </p>
+                                <p>
+                                По цвету
+                                </p>
+                            </div> }
                         </div>
-                        <div>
+                        <div className='menudiv'>
                             <p>
                                 По стилю
                             </p>
-                            <img src={icons} alt="icon" />
+                            <img src={icons} alt="icon" 
+                            onClick={()=>setStyle(!style)}/>
+                            {style &&
+                            <div>
+                                <p>
+                                По стилю
+                                </p>
+                                <p>
+                                По стилю
+                                </p>
+                                <p>
+                                По стилю
+                                </p>
+                            </div> }
                         </div>
-                        <div>
+                        <div className='menudiv'>
                             <p>
                                 По форме
                             </p>
-                            <img src={icons} alt="icon" />
+                            <img src={icons} alt="icon" 
+                            onClick={()=>setForm(!form)}/>
+                            {form &&
+                            <div>
+                                <p>
+                                По форме
+                                </p>
+                                <p>
+                                По форме
+                                </p>
+                                <p>
+                                По форме
+                                </p>
+                            </div> }
                         </div>
-                        <div>
+                        <div className='menudiv'>
                             <p>
                                 По составу
                             </p>
-                            <img src={icons} alt="icon" />
+                            <img src={icons} alt="icon" 
+                            onClick={()=>setCompound(!compound)}/>
+                            {compound &&
+                            <div>
+                                <p>
+                                По составу
+                                </p>
+                                <p>
+                                По составу
+                                </p>
+                                <p>
+                                По составу
+                                </p>
+                            </div>} 
                         </div>
                     </div>
                     <div className="div1" style={{height: height}}>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl1)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl1} alt="rtgl" />
                             </div>
@@ -70,7 +143,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl2)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl2} alt="rtgl" />
                             </div>
@@ -81,7 +157,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl3)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl3} alt="rtgl" />
                             </div>
@@ -92,7 +171,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl4)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl4} alt="rtgl" />
                             </div>
@@ -103,7 +185,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl5)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl5} alt="rtgl" />
                             </div>
@@ -114,7 +199,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl6)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl6} alt="rtgl" />
                             </div>
@@ -125,7 +213,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl7)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl7} alt="rtgl" />
                             </div>
@@ -136,7 +227,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" oonClick={()=>{
+                            setImg(rtgl8)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl8} alt="rtgl" />
                             </div>
@@ -147,7 +241,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl9)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl9} alt="rtgl" />
                             </div>
@@ -158,7 +255,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl10)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl10} alt="rtgl" />
                             </div>
@@ -169,7 +269,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl11)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl11} alt="rtgl" />
                             </div>
@@ -180,7 +283,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl12)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl12} alt="rtgl" />
                             </div>
@@ -191,7 +297,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl1)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl1} alt="rtgl" />
                             </div>
@@ -202,7 +311,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl2)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl2} alt="rtgl" />
                             </div>
@@ -213,7 +325,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl3)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl3} alt="rtgl" />
                             </div>
@@ -224,7 +339,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl4)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl4} alt="rtgl" />
                             </div>
@@ -235,7 +353,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl5)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl5} alt="rtgl" />
                             </div>
@@ -246,7 +367,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl6)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl6} alt="rtgl" />
                             </div>
@@ -257,7 +381,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl7)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl7} alt="rtgl" />
                             </div>
@@ -268,7 +395,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl8)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl8} alt="rtgl" />
                             </div>
@@ -279,7 +409,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl9)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl9} alt="rtgl" />
                             </div>
@@ -290,7 +423,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl10)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl10} alt="rtgl" />
                             </div>
@@ -301,7 +437,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl11)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl11} alt="rtgl" />
                             </div>
@@ -312,7 +451,10 @@ function Chandeliers() {
                                 от 999 000 сум
                             </p>
                         </div>
-                        <div className="div1card" onClick={naviget}>
+                        <div className="div1card" onClick={()=>{
+                            setImg(rtgl12)
+                            naviget()
+                        }}>
                             <div className="center">
                                 <img src={rtgl12} alt="rtgl" />
                             </div>

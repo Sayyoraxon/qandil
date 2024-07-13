@@ -9,7 +9,7 @@ import Lamps from "./Lamps"
 import { useState } from "react"
 import Chandelier from "./Chandelier"
 
-function Main() {
+function Main({setImg}) {
      const [chandeliers, setChandeliers] = useState(false)
      const [lamps, setLamps] = useState(true)
 
@@ -67,8 +67,8 @@ function Main() {
                                    Акции
                               </button>
                          </div>
-                         {lamps && <Lamps/>}
-                         {chandeliers && <Chandelier/>}
+                         {lamps && <Lamps  setImg={setImg}/>}
+                         {chandeliers && <Chandelier setImg={setImg}/>}
                          <div className="text2">
                               Посмотреть все
                          </div>

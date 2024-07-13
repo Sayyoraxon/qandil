@@ -14,9 +14,15 @@
     margin-right: 6px;
 }
 
+.descDiv>div:first-child{
+    background-color: rgba(0,0,0,0.02);
+ 
+}
+
 .descDiv>div:first-child>img {
     width: 375px;
     height: 500px;
+    object-fit: cover;
 }
 
 .model {
@@ -25,10 +31,39 @@
     margin-right: 57px;
 }
 
-.model>img:first-child {
+.model>div {
     width: 351px;
     height: 247px;
     margin-bottom: 6px;
+}
+
+div.video-react button.video-react-big-play-button {
+    font-size: 2.5em;
+    top: 100px;
+    left: 160px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+}
+
+div.video-react:hover button.video-react-big-play-button {
+    background-color: #fff;
+}
+
+div.video-react div.video-react-poster {
+    width: 351px;
+    height: 247px;
+    background-size: cover;
+    background-origin: border-box;
+    background-color: rgba(0,0,0,0.02);
+}
+
+div.video-react video.video-react-video {
+    background-color: #fff;
+    width: 351px;
+    height: 247px;
 }
 
 .model>img:last-child {
@@ -41,7 +76,7 @@
     font-family: "Inter", sans-serif;
     font-size: 32px;
     font-weight: 900;
-    line-height: 38.73px;
+    line-height: 38px;
     text-align: left;
     margin-bottom: 0px;
 }
@@ -156,6 +191,7 @@
 }
 
 .hidden {
+    margin-top: 26px;
     width: 100%;
     overflow-x: hidden;
     margin-bottom: 106px;
@@ -163,12 +199,10 @@
 
 .cardsDiv {
     display: flex;
+    transition: 1s;
 }
 
-.cardsDiv {
-    transform: translateX(0%);
-    transition: 2s;
-}
+
 
 .cardDiv2 {
     margin-right: 13px;
@@ -177,6 +211,7 @@
 .cardDiv2>div{
     width: 300px;
     height: 380px;
+    background-color: rgba(0,0,0,0.02);
 }
 
 .cardDiv2>div>img{
@@ -219,6 +254,7 @@ button.active3 {
     margin-top: 4px;
     padding: 30px 40px;
     background-color: rgba(15, 46, 74, 0.05);
+    
 }
 
 .desctext p {
@@ -226,20 +262,50 @@ button.active3 {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    text-align: left;
+    text-align: justify;
 }
 
 .recommendation {
     margin-top: 68px;
 }
 
-.recommendation h2 {
-    color: #0F2E4A;
+.next {
+    color: #0F2E4A;  
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(15, 46, 74, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prew {
+    width: 69px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prew img {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(15, 46, 74, 0.12);
+    cursor: pointer;
+}
+
+.prew img:first-child {
+    rotate: 90deg;
+}
+
+.prew img:last-child {
+    rotate: -90deg;
+}
+
+.next h2 {
     font-family: "Inter", sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding-bottom: 14px;
-    border-bottom: 1px solid rgba(15, 46, 74, 0.12);
+    margin-bottom: 0;
 }

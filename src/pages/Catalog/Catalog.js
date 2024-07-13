@@ -1,9 +1,6 @@
 import "./Catalog.css"
 import OutletCatalog from "./OutletCatalog"
-function Catalog() {
-
-
-   
+function Catalog({setImg}) {
 
     return (
         <>
@@ -12,7 +9,7 @@ function Catalog() {
                 
                 <div className="hr">
                 </div>
-                <OutletCatalog />
+                <OutletCatalog setImg={setImg}/>
             </div>
             
         </div>

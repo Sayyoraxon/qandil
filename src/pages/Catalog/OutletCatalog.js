@@ -1,7 +1,7 @@
 import React from 'react'
 import Chandeliers from './Chandeliers'
 
-function OutletCatalog() {
+function OutletCatalog({setImg}) {
   return (
     <div className="catalogMain">
                 <div>
@@ -44,7 +44,7 @@ function OutletCatalog() {
                     </button>
                 </div>
 
-                <Chandeliers/>
+                <Chandeliers setImg={setImg}/>
             </div>
   )
 }

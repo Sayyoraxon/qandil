@@ -43,7 +43,6 @@ function Navbar() {
             </div>
         </div>
         <Outlet/>
-        <Footer/>
         </>
     )
 }

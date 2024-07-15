@@ -11,6 +11,7 @@ import arw from "../images/Icons.svg"
 import { useState } from "react"
 import { Player } from "video-react"
 import Dialog from "./Dialog"
+import Footer from "../../components/Footer"
 
 
 function About({setImg, img}) {
@@ -182,6 +183,7 @@ function About({setImg, img}) {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

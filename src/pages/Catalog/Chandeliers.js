@@ -10,7 +10,7 @@ import rtgl7 from "../images/Rectangle_7.png"
 import rtgl8 from "../images/Rectangle_8.png"
 import rtgl9 from "../images/Rectangle_9.png"
 import rtgl10 from "../images/Rectangle_10.png"
-import rtgl11 from "../images/Rectangle_11.png"
+import rtgl11 from "../images/Rectangle 24.png"
 import rtgl12 from "../images/Rectangle_12.png"
 import { useNavigate } from 'react-router-dom'
 
@@ -466,10 +466,11 @@ function Chandeliers({setImg}) {
                             </p>
                         </div>
                     </div>
+                    {height !== "auto" &&
                     <button id='btnshow'
                     onClick={()=>setHeight("auto")}>
                         Показать ещё
-                    </button>
+                    </button>}
                 </div>
   )
 }

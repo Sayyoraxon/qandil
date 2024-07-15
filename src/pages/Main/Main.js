@@ -6,13 +6,13 @@ import group from "../images/Group.svg"
 import group1 from "../images/Group1.svg"
 import group2 from "../images/Group2.svg"
 import Lamps from "./Lamps"
-import { NavLink } from "react-router-dom"
 import { useState } from "react"
+import Footer from "../../components/Footer"
 
 
 function Main({ setImg }) {
 
-     const [height, setHeight] = useState("1428px")
+     const [height, setHeight] = useState("1408px")
 
      const buttons = [
           "Люстры",
@@ -150,43 +150,7 @@ function Main({ setImg }) {
                          </div>
                     </div>
                </div>
-               <div className="background4">
-                    <div className="container2">
-                         <div className="contact">
-                              <p>
-                                   Связатся с нами
-                              </p>
-                         </div>
-                         <p className="bottomnav">
-                              © 2023 Все права защищены.
-                         </p>
-                         <NavLink className="bottomnav">
-                              О компании
-                         </NavLink>
-                         <NavLink className="bottomnav">
-                              Продукты
-                         </NavLink>
-                         <NavLink className="bottomnav">
-                              Услуги
-                         </NavLink>
-                         <NavLink className="bottomnav">
-                              Новости
-                         </NavLink>
-                    </div>
-               </div>
-               <div className="background5">
-                    <div className="container3">
-                         <p style={{ opacity: "0.4" }}>
-                              Copyright: 2024
-                         </p>
-                         <p>
-                              О нас
-                         </p>
-                         <p>
-                              Помощь
-                         </p>
-                    </div>
-               </div>
+               <Footer/>
           </>
      )
 }

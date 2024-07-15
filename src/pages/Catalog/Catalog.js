@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer"
 import "./Catalog.css"
 import OutletCatalog from "./OutletCatalog"
 function Catalog({setImg}) {
@@ -11,8 +12,8 @@ function Catalog({setImg}) {
                 </div>
                 <OutletCatalog setImg={setImg}/>
             </div>
-            
         </div>
+        <Footer/>
         </>
     )
 }

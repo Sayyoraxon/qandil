@@ -1,4 +1,4 @@
-.contacts {
+.contactss {
     width: 1240px;
     margin-left: auto;
     margin-right: auto;
@@ -72,14 +72,22 @@
 }
 
 .location {
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin-top: 70px;
+    width: 100%;
+    
+}
+
+.locationDiv {
     width: 1240px;
-    height: 543px;
+    margin-left: auto;
+    margin-right: auto;
     overflow-x: hidden;
 }
 
-.location h1 {
+.location>h1 {
     position: relative;
     margin: 0;
     width: 806px;
@@ -92,11 +100,11 @@
     z-index: 4;
 }
 
-.location h1 span {
+.location>h1 span {
     color: #C00BDF;
 }
 
-.location p {
+.location>p {
     position: relative;
     margin-top: 22px;
     width: 636px;
@@ -111,7 +119,8 @@
 
 .location button {
     position: relative;
-    margin-top: 36px;
+    margin-top: 20px;
+    margin-bottom: 208px;
     width: 210px;
     height: 43px;
     border-radius: 100px;
@@ -126,6 +135,24 @@
     z-index: 4;
 }
 
-.location > div {
+.map {
     position: absolute;
+    top: 12px;
+    left: 251px;
+    width: 1347px;
+    height: 494px;
+}
+
+.map div{
+    position: absolute;
+    width: 1347px;
+    height: 494px;
+    top: 0;
+    left: 0;
+    background: radial-gradient(52.76% 50% at 50% 50%, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.92) 63.69%, #FFF 100%);
+    z-index: -1;
+}
+
+.grayscale {
+    filter: grayscale(100%)
 }

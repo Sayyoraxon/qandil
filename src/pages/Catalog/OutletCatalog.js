@@ -6,7 +6,8 @@ function OutletCatalog({setImg}) {
     <div className="catalogMain">
                 <div>
                     <p class="title">
-                        <span>Главная</span><span className='flx'>///</span>  
+                        <span>Главная</span>
+                        <span className='flx'>///</span>  
                         Каталог люстр
                     </p>
                     <h1>

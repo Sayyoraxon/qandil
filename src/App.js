@@ -3,10 +3,10 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import './App.css';
 import Catalog from './pages/Catalog/Catalog';
 import Main from './pages/Main/Main';
-import OutletCatalog from './pages/Catalog/OutletCatalog';
 import About from './pages/About/About';
 import Layout from './layout/Layout';
 import { useState } from 'react';
+import Contact from './pages/Contacs/Contact';
 
 function App() {
 
@@ -19,6 +19,7 @@ function App() {
         <Route index element={<Main setImg={setImg}/>} />
         <Route path="catalog" element={<Catalog setImg={setImg}/>} />
         <Route path="about" element={<About setImg={setImg} img={img}/>} />
+        <Route path="contacts" element={<Contact/>}/>
 
       </Route>
     )

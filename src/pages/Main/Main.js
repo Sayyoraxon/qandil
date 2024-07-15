@@ -6,72 +6,72 @@ import group from "../images/Group.svg"
 import group1 from "../images/Group1.svg"
 import group2 from "../images/Group2.svg"
 import Lamps from "./Lamps"
+import { NavLink } from "react-router-dom"
 import { useState } from "react"
-import Chandelier from "./Chandelier"
 
-function Main({setImg}) {
-     const [chandeliers, setChandeliers] = useState(false)
-     const [lamps, setLamps] = useState(true)
 
-     const chandelier = () => {
-          setChandeliers(true)
-          setLamps(false)
+function Main({ setImg }) {
+
+     const [height, setHeight] = useState("1428px")
+
+     const buttons = [
+          "Люстры",
+          "Светильники потолочные",
+          "Точечные светильники",
+          "Трековые системы",
+          "Бра и настенные",
+          "Торшеры",
+          "Настольные лампы",
+          "Уличные",
+          "Лампы",
+          "Акции"
+     ]
+
+     const toggle = (element) => {
+          const btns = Array.from(element.parentElement.children)
+          btns.forEach((item)=>{
+               item.classList.remove("active")
+               element.classList.add("active")
+          })
      }
 
-     const lamp = () => {
-          setLamps(true)
-
-          setChandeliers(false) 
-     }
 
      return (
-          <>           
+          <>
                <div className="background2">
                     <div className="container2">
+
                          <h1 className="text1">
                               Наше новые продукты
                          </h1>
                          <div className="menuDiv">
-                              <button className={chandeliers ? "active" : ""}
-                               onClick={chandelier}>
-                                   Люстры
-                              </button>
-                              <button>
-                                   Светильники потолочные
-                              </button>
-                              <button>
-                                   Точечные светильники
-                              </button>
-                              <button>
-                                   Трековые системы
-                              </button>
-                              <button>
-                                   Бра и настенные
-                              </button>
+                              {buttons.map((btn)=>(
+                                   btn === "Лампы" ?
+                                   <button className="active" onClick={(e) => {
+                                        toggle(e.target)
+                                   }}>
+                                       {btn} 
+                                   </button> 
+                                   :
+                                   btn === "Торшеры" ?
+                                   <button className="mgr" onClick={(e) => {
+                                        toggle(e.target)
+                                   }}>
+                                       {btn} 
+                                   </button> 
+                                   :
+                                   <button  onClick={(e) => {
+                                        toggle(e.target)
+                                   }}>
+                                       {btn} 
+                                   </button>
+                              ))}
+                              
                          </div>
-                         <div className="menuDiv2">
-                              <button>
-                                   Торшеры
-                              </button>
-                              <button>
-                                   Настольные лампы
-                              </button>
-                              <button>
-                                   Уличные
-                              </button>
-                              <button className={lamps ? "active" : ""}
-                                   onClick={lamp}>
-                                   Лампы
-                              </button>
-                              <button>
-                                   Акции
-                              </button>
-                         </div>
-                         {lamps && <Lamps  setImg={setImg}/>}
-                         {chandeliers && <Chandelier setImg={setImg}/>}
-                         <button className="text2">
+                         <Lamps setImg={setImg} height={height}/>
+                         {height !== "auto" && <button className="text2" onClick={()=>setHeight("auto")}>
                               Посмотреть все
-                         </button>
+                         </button>}
                     </div>
                </div>
                <div className="background3">
@@ -137,9 +137,9 @@ function Main({setImg}) {
                                         <input type="tel" />
                                    </div>
                                    <button className="text5">
-                                        
-                                             Отправить для обратного звонка
-                                        
+
+                                        Отправить для обратного звонка
+
                                    </button>
                               </div>
                               <div className="group">
@@ -160,18 +160,18 @@ function Main({setImg}) {
                          <p className="bottomnav">
                               © 2023 Все права защищены.
                          </p>
-                         <a href="#" className="bottomnav">
+                         <NavLink className="bottomnav">
                               О компании
-                         </a>
-                         <a href="#" className="bottomnav">
+                         </NavLink>
+                         <NavLink className="bottomnav">
                               Продукты
-                         </a>
-                         <a href="#" className="bottomnav">
-                              Продукты
-                         </a>
-                         <a href="#" className="bottomnav">
+                         </NavLink>
+                         <NavLink className="bottomnav">
+                              Услуги
+                         </NavLink>
+                         <NavLink className="bottomnav">
                               Новости
-                         </a>
+                         </NavLink>
                     </div>
                </div>
                <div className="background5">

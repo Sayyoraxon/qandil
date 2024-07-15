@@ -188,6 +188,67 @@ function Chandelier({setImg}) {
                     от 999 000 сум
                 </p>
             </div>
+            <div className="card" onClick={()=>{
+                setImg(ret2)
+                naviget()
+            }}>
+                <div className="center">
+                    <img src={ret2} alt="rtgl" />
+                </div>
+                <p>
+                    Ковер Electra 8514 серый
+                </p>
+                <p className="sum">
+                    от 999 000 сум
+                </p>
+            </div>
+            <div className="card" onClick={()=>{
+                setImg(ret1)
+                naviget()
+            }}>
+                <div className="center">
+                    <img src={ret1} alt="rtgl" />
+                </div>
+                <p>
+                    Ковер Electra 8514 серый
+                </p>
+                <p className="sum">
+                    от 999 000 сум
+                </p>
+            </div>
+            <div className="card"
+            onClick={()=>{
+                setImg(ret3)
+                naviget()
+            }}>
+                <div>
+                    <img src={ret3} alt="rtgl" />
+                </div>
+                <p>
+                    Ковер Electra 8514 серый
+                </p>
+                <p className="sum">
+                    от 999 000 сум
+                </p>
+            </div>
+            <div className="card" onClick={()=>{
+                setImg(ret4)
+                naviget()
+            }}>
+                <div>
+                    <img src={ret4} alt="rtgl" />
+                </div>
+                <p>
+                    Ковер Electra 8514 серый
+                </p>
+                <p className="sum">
+                    от 999 000 сум
+                </p>
+            </div>
+            <div className="card" onClick={()=>{
+                setImg(ret6)
+                naviget()
+            }}></div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import { NavLink, Outlet } from 'react-router-dom'
 import ellipce from "./images/Ellipse 1322.svg"
 import menu from "./images/menu.svg"
@@ -40,7 +40,7 @@ function Home() {
                                    <NavLink className="left abs4">
                                         Услуги
                                    </NavLink>
-                                   <NavLink className="left abs5">
+                                   <NavLink to="contacts" className="left abs5">
                                         Контакты
                                    </NavLink>
                               </nav>

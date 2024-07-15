@@ -24,7 +24,7 @@ function Navbar() {
                     <NavLink className="nav">
                         Услуги
                     </NavLink>
-                    <NavLink className="nav">
+                    <NavLink to="contacts" className="nav">
                         Контакты
                     </NavLink>
                 </div>

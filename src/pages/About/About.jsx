@@ -1,6 +1,5 @@
 import "./About.css"
 import "../../../node_modules/video-react/dist/video-react.css"
-import rtgl3 from "../images/Rectangle 3_1.png"
 import rtgl3_3 from "../images/Rectangle 3_3.png"
 import rtgl3_2 from "../images/Rectangle 3_2.png"
 import rtgl13 from "../images/Rectangle_13.png"
@@ -20,9 +19,7 @@ function About({setImg, img}) {
     const width = images.length / 4 * -100 + 100
 
     const [transition, setTransition] = useState(0)
-    const [active_1, setActive_1] = useState(true)
-    const [active_2, setActive_2] = useState(false)
-    const [active_3, setActive_3] = useState(false)
+    const [dialog, setDialog] = useState(false)
     const [active_1_1, setActive_1_1] = useState(true)
     const [active_2_2, setActive_2_2] = useState(false)
     const [active_3_3, setActive_3_3] = useState(false)
@@ -31,22 +28,32 @@ function About({setImg, img}) {
     const text1 = "Таким образом, в дополнение к работе с различными предложениями, которые часто влияют на дизайнерские решения в электронной коммерции, на этот раз перед нашей командой была поставлена ​​задача представить очень инновационный и узкоспециализированный продукт в эмоциональной, увлекательной и инклюзивной форме. Он взял на себя задачу создать дизайн, который выделял бы бренд из толпы, и применить его в высококонкурентном обществе."
     const text2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est optio accusantium et suscipit mollitia maxime repudiandae aliquid velit sint dolor cumque ea, architecto sapiente, quidem rem alias praesentium reprehenderit quaerat eveniet repellat eaque voluptatem ab aspernatur? Nemo vero ut eos."
     const text3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est optio accusantium et suscipit mollitia maxime repudiandae aliquid velit sint dolor cumque ea, architecto sapiente, quidem rem alias praesentium reprehenderit quaerat eveniet repellat eaque voluptatem ab aspernatur? Nemo vero ut eos. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    const sizes = ["2 x 3", "4 x 4,5", "4 x 6,5"]
     const [text, settext] = useState(text1)
 
-    console.log(width, transition)
+    const toggle = (element) => {
+        const array = Array.from(element.parentElement.children)
+        array.forEach((item)=>{
+            item.classList.remove("active2")
+        })
+        element.classList.add("active2")
+    }
     
     
     return (
         <>
-            <Dialog/>
+            {dialog && <Dialog img={img} setDialog={setDialog}/>}
             <p class="title">
-                <span>Главная</span><span className='flx'>///</span>
+                <span>Главная</span>
+                <span className='flx'>///</span>
                 Каталог ковров
             </p>
             <div className='aboutDiv'>
                 <div className="descDiv">
                     <div>
-                        <img src={img} alt="rtgl" />
+                        <img src={img} alt="rtgl"
+                            onClick = {()=> setDialog(true)}
+                        />
                     </div>
                     <div className="model">
                         <div>
@@ -67,33 +74,21 @@ function About({setImg, img}) {
                         <p className="razmer">
                             Размеры
                         </p>
-                        <button className={active_1 ? "active2 btn1" : "btn1"}
-                            onClick={() => {
-                                setActive_1(true)
-                                setActive_2(false)
-                                setActive_3(false)
-                            }}
-                        >
-                            2 x 3
-                        </button>
-                        <button className={active_2 ? "active2 btn1" : "btn1"}
-                            onClick={() => {
-                                setActive_2(true)
-                                setActive_1(false)
-                                setActive_3(false)
-                            }}
-                        >
-                            4 x 4,5
-                        </button>
-                        <button className={active_3 ? "active2 btn1" : "btn1"}
-                            onClick={() => {
-                                setActive_3(true)
-                                setActive_1(false)
-                                setActive_2(false)
-                            }}
-                        >
-                            4 x 6,5
-                        </button>
+
+                        <div>
+                        {
+                            sizes.map((siz)=> (
+                                <button className="btn1"
+                                    onClick={(e)=>{
+                                        toggle(e.target)
+                                    }}>
+                                    {siz}
+                                </button>
+                            ))
+                        }
+                        </div>
+                        
+                               
                         <p className="the">
                             The question isn't who is going to
                             let me. It's who is going to stop me.

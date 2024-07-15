@@ -1,5 +1,5 @@
 import "./Main.css"
-import icons1 from "../images/Icons.svg"
+import icons1 from "../images/Icons4.svg"
 import icons2 from "../images/Icons1.svg"
 import icons3 from "../images/Icons3.svg"
 import group from "../images/Group.svg"
@@ -69,9 +69,9 @@ function Main({setImg}) {
                          </div>
                          {lamps && <Lamps  setImg={setImg}/>}
                          {chandeliers && <Chandelier setImg={setImg}/>}
-                         <div className="text2">
+                         <button className="text2">
                               Посмотреть все
-                         </div>
+                         </button>
                     </div>
                </div>
                <div className="background3">
@@ -136,11 +136,11 @@ function Main({setImg}) {
                                         </p>
                                         <input type="tel" />
                                    </div>
-                                   <div className="text5">
-                                        <p>
+                                   <button className="text5">
+                                        
                                              Отправить для обратного звонка
-                                        </p>
-                                   </div>
+                                        
+                                   </button>
                               </div>
                               <div className="group">
                                    <img src={group} alt="grp" className="img1" />

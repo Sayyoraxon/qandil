@@ -11,6 +11,7 @@ import share from "../images/Icons/share.svg"
 import arw from "../images/Icons.svg"
 import { useState } from "react"
 import { Player } from "video-react"
+import Dialog from "./Dialog"
 
 
 function About({setImg, img}) {
@@ -37,6 +38,7 @@ function About({setImg, img}) {
     
     return (
         <>
+            <Dialog/>
             <p class="title">
                 <span>Главная</span><span className='flx'>///</span>
                 Каталог ковров

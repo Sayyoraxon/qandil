@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import ellipce from "./images/Ellipse 1322.svg"
 import menu from "./images/menu.svg"
@@ -19,7 +19,6 @@ function Home() {
                <div className="background1">
                     <div className="backfon">
                          <div className="fontop">
-
                               <img src={ellipce} alt="alp" className="fonbottom" />
                          </div>
 
@@ -46,9 +45,9 @@ function Home() {
                                    </NavLink>
                               </nav>
                               </div>
-                              <div className="hug right abs6">
+                              <button className="hug right abs6">
                                    Получить консултацию
-                              </div>
+                              </button>
                          </div>
 
                          <div className="main">
@@ -58,9 +57,9 @@ function Home() {
                               <p className="abs8">
                                    The question isn't who is going to let me. It's who is going to stop me.
                               </p>
-                              <div className="abs9 hug1">
+                              <button className="abs9 hug1">
                                    Подробнее
-                              </div>
+                              </button>
                          </div>
                          <h1 className="abs10">
                               3 200 000.00 UZS
@@ -82,7 +81,7 @@ function Home() {
                                    <div></div>
                                    <img src={ellipc3} alt="elpp" />
                               </div>
-                              <div className="alp4">
+                              <div className="alp4" >
                                    <div></div>
                                    <img src={ellipc4} alt="elpp" />
                               </div>

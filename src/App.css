@@ -4,15 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-body {
+body, html {
    font-family: "Jost", sans-serif;
-   letter-spacing: 0.8px;
-   margin: 0;
    overflow-x: hidden;
-
-
 }
-
 
 
 * {
@@ -29,6 +24,7 @@ a:hover {
 }
 
 .background1 {
+   overflow-x: hidden;
    width: 100%;
    height: 764px;
    background-color: rgba(45, 3, 114, 1);
@@ -68,7 +64,6 @@ a:hover {
    box-shadow: 60px 0 5px rgba(118, 3, 232, 0.4);
    filter: blur(35px);
    background-image: radial-gradient(#000427, #7603e8, #B100EF);
-
 }
 
 @keyframes mymove {
@@ -136,6 +131,7 @@ a:hover {
    margin-top: 19px;
    text-align: center;
    padding: 11px 0;
+   background-color: inherit;
    border: 2px solid #fff;
    border-radius: 30px;
    color: #fff;
@@ -244,6 +240,11 @@ a:hover {
    text-align: center;
    border: 2px solid #fff;
    border-radius: 30px;
+   background-color: inherit;
+}
+
+::-webkit-scrollbar {
+   width: 0px;
 }
 
 .abs10 {
@@ -280,31 +281,6 @@ a:hover {
    
 }
 
-.alp1 div {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 90px;
-   height: 90px;
-   border-radius: 50%;
-   background-image: url("./pages/images/Ellipse\ 1_1.png");
-   z-index: 1;
-}
-
-
-.alp1 img {
-   display: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 2;
-}
-
-.alp1:hover img {
-   display: block;
-}
 
 .alp2 {
    width: 90px;
@@ -313,62 +289,10 @@ a:hover {
 }
 
 
-.alp2 div {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 90px;
-   height: 90px;
-   border-radius: 50%;
-   background-image: url("./pages/images/Ellipse\ 2_2.png");
-   z-index: 1;
-}
-
-
-.alp2 img {
-   display: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 2;
-}
-
-.alp2:hover img {
-   display: block;
-}
-
 .alp3 {
    width: 90px;
    height: 90px;
    border-radius: 50%;
-}
-
-.alp3 div {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 90px;
-   height: 90px;
-   border-radius: 50%;
-   background-image: url("./pages/images/Ellipse\ 3_3.png");
-   z-index: 1;
-}
-
-
-.alp3 img {
-   display: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 2;
-}
-
-.alp3:hover img {
-   display: block;
 }
 
 .alp4 {
@@ -377,58 +301,37 @@ a:hover {
    border-radius: 50%;
 }
 
-.alp4 div {
+.alp1 div, 
+.alp2 div,
+.alp3 div,
+.alp4 div, 
+.alp5 div,
+.alp6 div {
    position: absolute;
    top: 0;
    left: 0;
    width: 90px;
    height: 90px;
    border-radius: 50%;
-   background-image: url("./pages/images/Ellipse\ 4_4.png");
+   background-color: #B100EF;
+   opacity: 0.6;
    z-index: 1;
 }
 
-
-.alp4 img {
-   display: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 2;
+.alp1 div:hover,
+.alp2 div:hover,
+.alp3 div:hover,
+.alp4 div:hover,
+.alp5 div:hover,
+.alp6 div:hover {
+   opacity: 0;
 }
 
-.alp4:hover img {
-   display: block;
-}
 
 .alp5 {
    width: 90px;
    height: 90px;
    border-radius: 50%;
-}
-
-.alp5 div {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 90px;
-   height: 90px;
-   border-radius: 50%;
-   background-image: url("./pages/images/Ellipse\ 5_5.png");
-   z-index: 1;
-}
-
-
-.alp5 img {
-   display: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 2;
 }
 
 .alp5:hover img {
@@ -441,30 +344,6 @@ a:hover {
    border-radius: 50%;
 }
 
-.alp6 div {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 90px;
-   height: 90px;
-   border-radius: 50%;
-   background-image: url("./pages/images/Ellipse\ 6_6.png");
-   z-index: 1;
-}
 
-
-.alp6 img {
-   display: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 2;
-}
-
-.alp6:hover img {
-   display: block;
-}
 
 

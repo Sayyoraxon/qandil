@@ -60,15 +60,25 @@ function Footer() {
                </div>
                <div className="background5">
                     <div className="container3 flexfooter">
-                         <p style={{ opacity: "0.4" }}>
-                              Copyright: 2024
-                         </p>
-                         <p>
-                              О нас
-                         </p>
-                         <p>
-                              Помощь
-                         </p>
+                         <div>
+                              <p style={{ opacity: "0.4" }}>
+                                   Copyright: 2024
+                              </p>
+                              <p>
+                                   О нас
+                              </p>
+                              <p>
+                                   Помощь
+                              </p>
+                         </div>
+                         <div>
+                              <p style={{ opacity: "0.4", marginRight: "14px" }}>
+                                   Designed by:
+                              </p>
+                              <p className='outfit'>
+                                   Getter
+                              </p>
+                         </div>
                     </div>
                </div>
           </>

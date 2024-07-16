@@ -603,4 +603,8 @@ a:hover:not("notHover") {
       height: 60px;
       object-fit: cover;
    }
+
+   .abs11 {
+      width: 100%;
+   }
 }

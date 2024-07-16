@@ -237,4 +237,9 @@ p.outfit {
       margin-bottom: 8px;
    }
 
+   .flexfooter>div:last-child p {
+      text-align: right;
+      width: 110px
+   }
+
 }

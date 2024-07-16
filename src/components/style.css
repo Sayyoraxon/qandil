@@ -163,7 +163,6 @@ p.outfit {
    font-weight: 800;
    line-height: normal;
    margin-right: 0;
-   margin-right: 0;
 }
 
 
@@ -227,17 +226,20 @@ p.outfit {
      margin-right: 20px;
    }
 
-   .flexfooter>div:first-child p:first-child {
-      width: 250px; 
+   .flexfooter>div {
+      width: 50%; 
    }
 
    .flexfooter p:first-child {
+      width: 100%;
       margin-bottom: 8px;
    }
 
+
    .flexfooter>div:last-child p {
+      width: 100%;
+      margin-right: 0;
       text-align: right;
-      width: 100px
    }
 
 }

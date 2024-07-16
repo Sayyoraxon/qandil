@@ -72,7 +72,7 @@ function Footer() {
                               </p>
                          </div>
                          <div>
-                              <p style={{ opacity: "0.4", marginRight: "14px" }}>
+                              <p style={{ opacity: "0.4" }}>
                                    Designed by:
                               </p>
                               <p className='outfit'>

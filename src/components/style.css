@@ -216,8 +216,6 @@ p.outfit {
       margin-right: 0;
       margin-left: 30px;
       margin-bottom: 20px;
-      position: relative;
-      left: 12px;
    }
 
    .background5 {
@@ -239,7 +237,7 @@ p.outfit {
 
    .flexfooter>div:last-child p {
       text-align: right;
-      width: 110px
+      width: 100px
    }
 
 }

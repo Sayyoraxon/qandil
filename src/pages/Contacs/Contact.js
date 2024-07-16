@@ -61,7 +61,8 @@ const Contact = () => {
                         Свяжитесь с нами
                     </button>
 
-                    <a href="https://yandex.uz/maps/org/bellissimo_pizza/69195717210/?ll=69.329099%2C41.315025&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=16.76"
+                    <a  rel="noreferrer" 
+                    href="https://yandex.uz/maps/org/bellissimo_pizza/69195717210/?ll=69.329099%2C41.315025&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=16.76"
                         target='_blank'
                         className='notHover'
                     >

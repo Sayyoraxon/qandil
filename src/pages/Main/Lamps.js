@@ -50,8 +50,8 @@ function Lamps({setImg, height}) {
                 setImg(ret3)
                 naviget()
             }}>
-                <div>
-                    <img src={ret3} alt="rtgl" />
+                <div className='center'>
+                    <img  src={ret3} alt="rtgl" />
                 </div>
                 <p>
                     Ковер Electra 8514 серый

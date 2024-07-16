@@ -12,7 +12,7 @@ import Footer from "../../components/Footer"
 
 function Main({ setImg }) {
 
-     const [height, setHeight] = useState("1408px")
+     const [height, setHeight] = useState("")
 
      const buttons = [
           "Люстры",
@@ -39,7 +39,7 @@ function Main({ setImg }) {
      return (
           <>
                <div className="background2">
-                    <div className="container2">
+                    <div className="container2_1">
 
                          <h1 className="text1">
                               Наше новые продукты
@@ -128,14 +128,8 @@ function Main({ setImg }) {
                                    </p>
                                    <input type="text" placeholder="Имя" />
                                    <input type="text" placeholder="место заказа" />
-                                   <div className="tel">
-                                        <p>
-                                             <small>
-                                                  +998
-                                             </small>
-                                        </p>
-                                        <input type="tel" />
-                                   </div>
+                                   <input type="tel" defaultValue="+998" />
+                                   
                                    <button className="text5">
 
                                         Отправить для обратного звонка

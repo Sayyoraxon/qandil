@@ -10,6 +10,7 @@ import ellipc3 from "./images/Ellipse 3.png"
 import ellipc4 from "./images/Ellipse 4.png"
 import ellipc5 from "./images/Ellipse 5.png"
 import ellipc6 from "./images/Ellipse 6.png"
+import bars from "./images/bars.svg"
 
 function Home() {
 
@@ -27,27 +28,28 @@ function Home() {
                               <img src={hero} alt="hero" />
                          </div>
 
-                         <div className="header flex">
-                              <div className='flex'>
-                              <img src={logo} alt="logo" className="abs1" />
+                         <div className="header">
+                              <div className='flexCol'>
+                                   <img src={logo} alt="logo" className="abs1" />
 
-                              <nav className='height21'>
-                                   <NavLink to="catalog" className="menu abs2">
-                                        <img src={menu} alt="menu" />
-                                        Каталог продуктов
-                                   </NavLink>
+                                   <nav className='height21'>
+                                        <NavLink to="catalog" className="menu abs2">
+                                             <img src={menu} alt="menu" />
+                                             Каталог продуктов
+                                        </NavLink>
 
-                                   <NavLink className="left abs4">
-                                        Услуги
-                                   </NavLink>
-                                   <NavLink to="contacts" className="left abs5">
-                                        Контакты
-                                   </NavLink>
-                              </nav>
+                                        <NavLink className="abs4 none">
+                                             Услуги
+                                        </NavLink>
+                                        <NavLink to="contacts" className="abs5 none">
+                                             Контакты
+                                        </NavLink>
+                                   </nav>
                               </div>
-                              <button className="hug right abs6">
+                              <button className="hug right abs6 none">
                                    Получить консултацию
                               </button>
+                              <img src={bars} alt="bars" className='block'/>
                          </div>
 
                          <div className="main">

@@ -59,6 +59,7 @@ function OutletCatalog({ setImg }) {
                             onClick={(e) => {
                                 setText(item)
                                 toggle(e.target)
+                                setPositon(false)
                             }}>
                             {item}
                         </button>

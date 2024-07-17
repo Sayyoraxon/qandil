@@ -21,10 +21,12 @@ function About({setImg, img}) {
 
     const [transition, setTransition] = useState(0)
     const [dialog, setDialog] = useState(false)
-    const [active_1_1, setActive_1_1] = useState(true)
-    const [active_2_2, setActive_2_2] = useState(false)
-    const [active_3_3, setActive_3_3] = useState(false)
 
+    const buttons = [
+        "Описание продукта",
+        "Как заказать",
+        "Доставка и оплата"
+    ]
 
     const text1 = "Таким образом, в дополнение к работе с различными предложениями, которые часто влияют на дизайнерские решения в электронной коммерции, на этот раз перед нашей командой была поставлена ​​задача представить очень инновационный и узкоспециализированный продукт в эмоциональной, увлекательной и инклюзивной форме. Он взял на себя задачу создать дизайн, который выделял бы бренд из толпы, и применить его в высококонкурентном обществе."
     const text2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est optio accusantium et suscipit mollitia maxime repudiandae aliquid velit sint dolor cumque ea, architecto sapiente, quidem rem alias praesentium reprehenderit quaerat eveniet repellat eaque voluptatem ab aspernatur? Nemo vero ut eos."
@@ -32,14 +34,28 @@ function About({setImg, img}) {
     const sizes = ["2 x 3", "4 x 4,5", "4 x 6,5"]
     const [text, settext] = useState(text1)
 
-    const toggle = (element) => {
+    const toggle = (element, i) => {
+        const array = Array.from(element.parentElement.children)
+        array.forEach((item)=>{
+            item.classList.remove("active3")
+        })
+        element.classList.add("active3")
+        i === 0 && settext(text1)
+        i === 1 && settext(text2)
+        i === 2 && settext(text3)
+    }
+
+    const toggle1 = (element, i) => {
         const array = Array.from(element.parentElement.children)
         array.forEach((item)=>{
             item.classList.remove("active2")
         })
         element.classList.add("active2")
+        i === 0 && settext(text1)
+        i === 1 && settext(text2)
+        i === 2 && settext(text3)
     }
-    
+
     
     return (
         <>
@@ -78,10 +94,10 @@ function About({setImg, img}) {
 
                         <div>
                         {
-                            sizes.map((siz)=> (
-                                <button className="btn1"
+                            sizes.map((siz, i)=> (
+                                <button className={`btn1 ${i === 0 && "active2"}`}
                                     onClick={(e)=>{
-                                        toggle(e.target)
+                                        toggle1(e.target)
                                     }}>
                                     {siz}
                                 </button>
@@ -111,36 +127,14 @@ function About({setImg, img}) {
                 </div>
 
                 <div className="orderDesc">
-                    <button className={active_1_1 ? "active3" : ""}
-                        onClick={() => {
-                            setActive_1_1(true)
-                            setActive_2_2(false)
-                            setActive_3_3(false)
-                            settext(text1)
-                        }}
-                    >
-                        Описание продукта
-                    </button>
-                    <button className={active_2_2 ? "active3" : ""}
-                        onClick={() => {
-                            setActive_2_2(true)
-                            setActive_1_1(false)
-                            setActive_3_3(false)
-                            settext(text2)
-                        }}
-                    >
-                        Как заказать
-                    </button>
-                    <button className={active_3_3 ? "active3" : ""}
-                        onClick={() => {
-                            setActive_3_3(true)
-                            setActive_1_1(false)
-                            setActive_2_2(false)
-                            settext(text3)
-                        }}
-                    >
-                        Доставка и оплата
-                    </button>
+
+                    {buttons.map((btn, i)=>(
+                        <button className={i === 0 && "active3"}
+                        onClick={(e)=>{toggle(e.target, i)}}>
+                            {btn}
+                        </button>
+                    ))}
+                   
                 </div>
                 <div className="desctext">
 

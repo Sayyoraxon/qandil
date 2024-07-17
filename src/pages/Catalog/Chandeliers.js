@@ -14,9 +14,9 @@ import rtgl11 from "../images/Rectangle 24.png"
 import rtgl12 from "../images/Rectangle_12.png"
 import { useNavigate } from 'react-router-dom'
 
-function Chandeliers({setImg}) {
+function Chandeliers({ setImg }) {
 
-    const [height, setHeight] = useState("1940px")
+    const [height, setHeight] = useState("")
     const [size, setSize] = useState(false)
     const [color, setColor] = useState(false)
     const [style, setStyle] = useState(false)
@@ -29,17 +29,18 @@ function Chandeliers({setImg}) {
         navigate("/about", { replace: true })
     }
 
-  return (
-    <div className="width925">
-                    <div className="catalogmenunav">
-                        <div className='menudiv'>
-                            <p>
-                                По размерам
-                            </p>
-                            <img src={icons} alt="icon" 
-                            onClick={()=>setSize(!size)}/>
-                           {size && 
-                           <div>
+    return (
+        <div className="width925">
+            <div className='scroll'>
+                <div className="catalogmenunav">
+                    <div className='menudiv'>
+                        <p>
+                            По размерам
+                        </p>
+                        <img src={icons} alt="icon"
+                            onClick={() => setSize(!size)} />
+                        {size &&
+                            <div>
                                 <p>
                                     По размерам
                                 </p>
@@ -49,430 +50,431 @@ function Chandeliers({setImg}) {
                                 <p>
                                     По размерам
                                 </p>
-                            </div> }
-                        </div>
-                        <div className='menudiv'>
-                            <p>
-                                По цвету
-                            </p>
-                            <img src={icons} alt="icon" 
-                            onClick={()=>setColor(!color)}/>
-                            {color  && 
-                            <div>
-                                <p>
-                                По цвету
-                                </p>
-                                <p>
-                                По цвету
-                                </p>
-                                <p>
-                                По цвету
-                                </p>
-                            </div> }
-                        </div>
-                        <div className='menudiv'>
-                            <p>
-                                По стилю
-                            </p>
-                            <img src={icons} alt="icon" 
-                            onClick={()=>setStyle(!style)}/>
-                            {style &&
-                            <div>
-                                <p>
-                                По стилю
-                                </p>
-                                <p>
-                                По стилю
-                                </p>
-                                <p>
-                                По стилю
-                                </p>
-                            </div> }
-                        </div>
-                        <div className='menudiv'>
-                            <p>
-                                По форме
-                            </p>
-                            <img src={icons} alt="icon" 
-                            onClick={()=>setForm(!form)}/>
-                            {form &&
-                            <div>
-                                <p>
-                                По форме
-                                </p>
-                                <p>
-                                По форме
-                                </p>
-                                <p>
-                                По форме
-                                </p>
-                            </div> }
-                        </div>
-                        <div className='menudiv'>
-                            <p>
-                                По составу
-                            </p>
-                            <img src={icons} alt="icon" 
-                            onClick={()=>setCompound(!compound)}/>
-                            {compound &&
-                            <div>
-                                <p>
-                                По составу
-                                </p>
-                                <p>
-                                По составу
-                                </p>
-                                <p>
-                                По составу
-                                </p>
-                            </div>} 
-                        </div>
+                            </div>}
                     </div>
-                    <div className="div1" style={{height: height}}>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl1)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl1} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl2)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl2} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored" onClick={naviget}>
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl3)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl3} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl4)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl4} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored" >
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl5)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl5} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl6)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl6} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl7)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl7} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" oonClick={()=>{
-                            setImg(rtgl8)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl8} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl9)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl9} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl10)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl10} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl11)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl11} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl12)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl12} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl1)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl1} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl2)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl2} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl3)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl3} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl4)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl4} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl5)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl5} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl6)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl6} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl7)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl7} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl8)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl8} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl9)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl9} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl10)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl10} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl11)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl11} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
-                        <div className="div1card" onClick={()=>{
-                            setImg(rtgl12)
-                            naviget()
-                        }}>
-                            <div className="center">
-                                <img src={rtgl12} alt="rtgl" />
-                            </div>
-                            <p>
-                                Ковер Electra 8514 серый
-                            </p>
-                            <p className="colored">
-                                от 999 000 сум
-                            </p>
-                        </div>
+                    <div className='menudiv'>
+                        <p>
+                            По цвету
+                        </p>
+                        <img src={icons} alt="icon"
+                            onClick={() => setColor(!color)} />
+                        {color &&
+                            <div>
+                                <p>
+                                    По цвету
+                                </p>
+                                <p>
+                                    По цвету
+                                </p>
+                                <p>
+                                    По цвету
+                                </p>
+                            </div>}
                     </div>
-                    {height !== "auto" &&
-                    <button id='btnshow'
-                    onClick={()=>setHeight("auto")}>
-                        Показать ещё
-                    </button>}
+                    <div className='menudiv'>
+                        <p>
+                            По стилю
+                        </p>
+                        <img src={icons} alt="icon"
+                            onClick={() => setStyle(!style)} />
+                        {style &&
+                            <div>
+                                <p>
+                                    По стилю
+                                </p>
+                                <p>
+                                    По стилю
+                                </p>
+                                <p>
+                                    По стилю
+                                </p>
+                            </div>}
+                    </div>
+                    <div className='menudiv'>
+                        <p>
+                            По форме
+                        </p>
+                        <img src={icons} alt="icon"
+                            onClick={() => setForm(!form)} />
+                        {form &&
+                            <div>
+                                <p>
+                                    По форме
+                                </p>
+                                <p>
+                                    По форме
+                                </p>
+                                <p>
+                                    По форме
+                                </p>
+                            </div>}
+                    </div>
+                    <div className='menudiv'>
+                        <p>
+                            По составу
+                        </p>
+                        <img src={icons} alt="icon"
+                            onClick={() => setCompound(!compound)} />
+                        {compound &&
+                            <div>
+                                <p>
+                                    По составу
+                                </p>
+                                <p>
+                                    По составу
+                                </p>
+                                <p>
+                                    По составу
+                                </p>
+                            </div>}
+                    </div>
                 </div>
-  )
+            </div>
+            <div className="div1" style={{height: height === "auto" && "auto" }}>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl1)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl1} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl2)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl2} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored" onClick={naviget}>
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl3)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl3} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl4)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl4} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored" >
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl5)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl5} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl6)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl6} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl7)
+                    naviget()
+                }}>
+                    <div >
+                        <img src={rtgl7} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" oonClick={() => {
+                    setImg(rtgl8)
+                    naviget()
+                }}>
+                    <div >
+                        <img src={rtgl8} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl9)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl9} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl10)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl10} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl11)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl11} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl12)
+                    naviget()
+                }}>
+                    <div className="center">
+                        <img src={rtgl12} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl1)
+                    naviget()
+                }}>
+                    <div className="center">
+                        <img src={rtgl1} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl2)
+                    naviget()
+                }}>
+                    <div className="center">
+                        <img src={rtgl2} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl3)
+                    naviget()
+                }}>
+                    <div className="center">
+                        <img src={rtgl3} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl4)
+                    naviget()
+                }}>
+                    <div className="center">
+                        <img src={rtgl4} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl5)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl5} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl6)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl6} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl7)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl7} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl8)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl8} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl9)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl9} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl10)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl10} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl11)
+                    naviget()
+                }}>
+                    <div className="center">
+                        <img src={rtgl11} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+                <div className="div1card" onClick={() => {
+                    setImg(rtgl12)
+                    naviget()
+                }}>
+                    <div>
+                        <img src={rtgl12} alt="rtgl" />
+                    </div>
+                    <p>
+                        Ковер Electra 8514 серый
+                    </p>
+                    <p className="colored">
+                        от 999 000 сум
+                    </p>
+                </div>
+            </div>
+            {height !== "auto" &&
+                <button id='btnshow'
+                    onClick={() => setHeight("auto")}>
+                    Показать ещё
+                </button>}
+        </div>
+    )
 }
 
 export default Chandeliers

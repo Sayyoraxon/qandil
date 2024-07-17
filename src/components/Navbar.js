@@ -1,8 +1,10 @@
 import menuDark from "../pages/images/menuDark.svg"
+import bars from "../pages/images/barsDark.svg"
 import logoDark from "../pages//images/logoDark.svg"
 import vector from "../pages/images/Vector.svg"
+import logoMobile from "../pages/images/logoMobila.svg"
 import { NavLink, Outlet, useNavigate } from "react-router-dom"
-import Footer from "./Footer"
+import "./style.css"
 
 function Navbar() {
 
@@ -30,10 +32,9 @@ function Navbar() {
                 </div>
             </div>
             <div className="darklogo" onClick={naviget}>
-                <img src={logoDark} alt="logo" />
-                <img src={vector} alt="vec" className="vector" />
+                <img src={logoMobile} alt="logo"/>
             </div>
-            <div>
+            <div className="none730">
                 <p>
                     Приём звонков 24/7
                 </p>
@@ -41,6 +42,7 @@ function Navbar() {
                     +998 90 000 00 00
                 </p>
             </div>
+            <img src={bars} alt="bars" className="menuDark"/>
         </div>
         <Outlet/>
         </>

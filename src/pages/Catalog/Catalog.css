@@ -12,98 +12,6 @@
    margin-bottom: 700px;
 }
 
-.catalogHeader {
-   margin-top: 21px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 1240px;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-.catalogHeader>div {
-   width: 413px;
-   text-align: center;
-}
-
-.catalogHeader>div:first-child {
-   display: flex;
-   align-items: center;
-}
-
-.catalogHeader>div:last-child>p:first-child {
-   font-family: "Montserrat", sans-serif;
-   margin-bottom: 0;
-   font-size: 12px;
-   font-weight: 500;
-   line-height: 16px;
-   color: #091A2A;
-   opacity: 0.5;
-   text-align: right;
-   padding-right: 16px;
-}
-
-.catalogHeader>div:last-child>p:last-child {
-   margin-top: 0;
-   font-family: "Montserrat", sans-serif;
-   font-size: 15px;
-   font-weight: 600;
-   line-height: 16px;
-   color: #091A2A;
-   text-align: right;
-}
-
-.catalogHeader>div:first-child img {
-   margin-right: 12px;
-
-}
-
-
-
-.catalogHeader>div:first-child>div {
-   display: flex;
-   align-items: center;
-}
-
-.catalogHeader>div:first-child>div>a {
-   display: block;
-   font-size: 13px;
-   font-weight: 600;
-   line-height: 15.73px;
-   text-decoration: none;
-   margin-right: 17px;
-   padding: 8px 17px 8px 0;
-   color: #091A2A;
-}
-
-.flexnav {
-   margin-top: -8px;
-   display: flex;
-   align-items: center;
-}
-
-.flexnav img {
-   width: 20px;
-   height: 20px;
-   position: relative;
-   top: 4px
-}
-
-.catalogHeader>div:first-child>div>a:first-child {
-   border-right: 1px solid #eee;
-}
-
-.darklogo {
-   position: relative;
-}
-
-.vector {
-   position: absolute;
-   bottom: 7px;
-   left: 134px;
-}
-
 .hr {
    margin-top: 31px;
    background-color: #eee;
@@ -112,6 +20,7 @@
 }
 
 .catalogMain {
+   position: relative;
    width: 1240px;
    display: flex;
 }
@@ -122,6 +31,7 @@
 
 .width925 {
    width: 925px;
+   position: relative;
 }
 
 .title {
@@ -136,7 +46,7 @@
    color: #172335;
 }
 
-.title > span {
+.title>span {
    color: rgba(15, 46, 74, 0.6)
 }
 
@@ -178,6 +88,16 @@
    color: #fff;
 }
 
+.scroll {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 400px;
+   overflow-x: scroll;
+   overflow-y: visible;
+}
+
 .catalogmenunav {
    margin-top: 59px;
    width: 925px;
@@ -191,8 +111,11 @@
    opacity: 0.12px;
 }
 
+
+
 .menudiv {
    position: relative;
+   float: left;
    padding: 0 20px 0 18px;
    width: 185px;
    height: 52px;
@@ -222,6 +145,35 @@
    z-index: 1;
 }
 
+.blockDiv {
+   margin-top: 24px;
+   padding: 0 10px;
+   display: none;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 270px;
+   height: 38px;
+   border-radius: 8px;
+   background: rgba(82, 0, 255, 0.1);
+   color: #0F2E4A;
+   font-family: "Inter", sans-serif;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+.blockDiv img:first-child {
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+}
+
+.blockDiv img:last-child {
+   width: 16px;
+   height: 16px;
+}
+
 .menudiv>div>p {
    margin: 0;
    padding: 8px 12px;
@@ -245,19 +197,27 @@
 }
 
 .div1 {
-   margin-top: 25px;
-   width: 925px;
+   margin-top: 136px;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: flex-start;
    overflow-y: hidden;
+   margin-left: -13px;
+   height: 1940px;
 }
 
 .div1card {
-   width: 300px;
-   height: 445px;
+   flex-grow: 1;
+   width: 295px;
    margin-bottom: 40px;
+   margin-left: 13px;
+   text-align: center;
+}
+
+.div1card img {
+   height: 380px;
+   object-fit: cover;
 }
 
 .div1card:hover img {
@@ -266,7 +226,7 @@
 }
 
 .div1card div {
-   width: 300px;
+   width: 100%;
    height: 380px;
    border-radius: 6px;
    border: 1px solid #E7E6EF;
@@ -274,7 +234,8 @@
    background: linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%);
 }
 
-.div1card p, .cardDiv2 p {
+.div1card p,
+.cardDiv2 p {
    font-family: "Inter", sans-serif;
    font-size: 17px;
    font-weight: 600;
@@ -309,5 +270,131 @@ p.colored {
 
 #btnshow:hover {
    background-color: rgba(82, 0, 255, 0.3);
-   ;
+}
+
+.noneDiv {
+   background-color: #fff;
+   z-index: 4;
+   top: 99px;
+   border-radius: 6px;
+}
+
+
+@media only screen and (max-width: 1240px) {
+
+   .catalogDiv,
+   .catalogMain,
+   .title {
+      width: 100%;
+   }
+
+   .hr {
+      padding: 0 8px;
+   }
+
+   .catalogMain>div:first-child {
+      width: 25%;
+      margin-left: 8px;
+   }
+
+   .width925 {
+      width: 75%
+   }
+
+   .div1 {
+      padding-right: 8px;
+   }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+   .div1 {
+      height: 1600px;
+   }
+
+   .div1card {
+      width: 250px;
+   }
+
+   .div1card>div {
+      height: 317px;
+   }
+
+   .div1card img {
+      height: 317px;
+   }
+}
+
+@media only screen and (max-width: 900px) {
+
+   .catalogMain>div:first-child{
+      width: 100%;
+   }
+
+   .catalogMain {
+      flex-direction: column;
+   }
+
+   .noneDiv {
+      display: none;
+   }
+
+   .blockDiv {
+      display: flex;
+   }
+
+   .width925 {
+      width: 100%
+   }
+
+   .div1 {
+      height: 1650px;
+      padding: 0 8px;
+      margin-top: 93px;
+   }
+
+   .title {
+      margin-top: 20px;
+      line-height: normal;
+   }
+
+   .catalogmenunav {
+      height: 48px;
+      margin-top: 20px;
+   }
+
+   .div1card {
+      margin-bottom: 30px;
+   }
+
+   #btnshow {
+      height: 43px;
+   }
+
+   .catalogDiv {
+      margin-bottom: 216px;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .div1 {
+      height: 1350px;
+   }
+
+   .div1card {
+      width: 171px;
+   }
+
+   .div1card>div {
+      height: 218px;
+   }
+
+   .div1card img {
+      height: 218px;
+   }
+
+   .title {
+      font-size: 13px;
+   }
 }

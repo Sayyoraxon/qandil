@@ -31,8 +31,8 @@ function Main({ setImg }) {
           const btns = Array.from(element.parentElement.children)
           btns.forEach((item)=>{
                item.classList.remove("active")
-               element.classList.add("active")
           })
+          element.classList.add("active")
      }
 
 

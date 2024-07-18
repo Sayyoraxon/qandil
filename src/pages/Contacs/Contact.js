@@ -6,10 +6,13 @@ import { Placemark, YMaps, Map } from '@pbe/react-yandex-maps'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import Footer from '../../components/Footer'
+import useWindowDimensions from '../About/useWindowDimensions'
 
 const Contact = () => {
 
-    return (
+    const {width} = useWindowDimensions()
+
+    return (    
         <>
             <div className='contactss'>
                 <div className="hr">
@@ -49,9 +52,8 @@ const Contact = () => {
             <div className='location'>
                 <div className='locationDiv'>
                     <h1>
-                        Остались вопросы? Позвоните нам, и мы вас
-                        <span>
-                            проконсультируем
+                        Остались вопросы? Позвоните нам, и мы вас <span>
+                             проконсультируем
                         </span>
                     </h1>
                     <p>
@@ -78,7 +80,7 @@ const Contact = () => {
                                         options={{
                                             iconLayout: "default#image",
                                             iconImageHref: metka,
-                                            iconImageSize: [32, 61],
+                                            iconImageSize: width>768 ? [32, 61] : [13, 25],
                                             iconColor: "red",
                                         }}
                                         geometry={[41.315025, 69.329099]}

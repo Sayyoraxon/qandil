@@ -178,14 +178,14 @@ a.bottomnav:hover,
    position: relative;
    margin-top: 19px;
    width: 100%;
-   height: 77px;
+   height: 73px;
    background-color: #2A1055;
    z-index: 4;
 }
 
 .container3 {
    width: 1240px;
-   height: 77px;
+   height: 73px;
    margin-left: auto;
    margin-right: auto;
    display: flex;
@@ -281,6 +281,7 @@ p.outfit {
 
    .flexrow {
       margin-top: 20px;
+      margin-bottom:6px;
    }
 
    .show {

@@ -159,7 +159,7 @@ div.video-react video.video-react-video {
     width: 200px;
     height: 47px;
     cursor: pointer;
-    margin-bottom: 10;
+    margin-bottom: 10px;
 }
 
 .btn3 {
@@ -482,7 +482,7 @@ svg.fa-lg {
 @media only screen and (max-width: 1240px) {
     .aboutDiv {
         width: 100%;
-        padding: 0 8px;
+        padding: 0 12px;
     }
 
 }
@@ -565,7 +565,7 @@ svg.fa-lg {
 
     .orderDesc button {
         width: auto;
-        padding: 16px 4px;
+        padding: 16px 9px;
         text-align: center;
     }
 

@@ -286,10 +286,11 @@ p.colored {
    .catalogMain,
    .title {
       width: 100%;
+      padding-left: 12px;
    }
 
    .hr {
-      padding: 0 8px;
+      padding: 0 12px;
    }
 
    .catalogMain>div:first-child {

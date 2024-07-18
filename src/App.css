@@ -386,7 +386,7 @@ a:hover:not("notHover") {
 
 @media only screen and (max-width: 1331px) {
    .background1 {
-      padding: 0 8px;
+      padding: 0 12px;
    }
 
    .container2 {

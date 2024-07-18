@@ -264,7 +264,7 @@ p.outfit {
 
    .background4,
    .background5 {
-      padding: 0 8px;
+      padding: 0 12px;
    }
 
    .container3,
@@ -292,7 +292,7 @@ p.outfit {
 
 @media only screen and (max-width: 900px) {
    .catalogHeader{
-      padding: 0 8px;
+      padding: 0 12px;
    }
 
    .p, .none730,

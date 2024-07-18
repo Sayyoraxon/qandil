@@ -638,8 +638,9 @@ svg.fa-lg {
 
 
     .lineardiv img {
-        width: 341px;
-        height: 358px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
     .form {

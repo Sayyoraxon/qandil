@@ -23,27 +23,23 @@ const Dialog = ({img, setDialog}) => {
         </div>
         <div className='form'>
           <h2>
-            Понравился товар? Мы вам перезвоним!
+             Мы перезвоним
           </h2>
           <p>
             Если у вас возникли затруднения в выборе, оставьте свои контактные данные и мы вам поможем!
           </p>
-          <label>
-            Ваше имя
             <input type='text' placeholder='Имя' />
-          </label>
-          <label>
-            Где живёте
+          
             <input type='text' placeholder='место заказа' />
-          </label>
-          <label>
-            Телефон
+          
             <input type='text' defaultValue="+998" />
-          </label>
-
-          <button>
+        
+          <div style={{textAlign: "center", marginBottom: "50px"}}>
+            <button>
           Отправить для обратного звонка
           </button>
+          </div>
+          
         </div>
       </div>
     </div>

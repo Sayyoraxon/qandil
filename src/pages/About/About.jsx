@@ -12,12 +12,23 @@ import { useState } from "react"
 import { Player } from "video-react"
 import Dialog from "./Dialog"
 import Footer from "../../components/Footer"
+import useWindowDimensions from "./useWindowDimensions"
 
 
-function About({setImg, img}) {
+
+
+
+
+
+function About({ setImg, img }) {
+
+
+
+    const { width } = useWindowDimensions()
+
 
     const images = [rtgl13, rtgl14, rtgl15, rtgl16, rtgl14, rtgl15, rtgl13, rtgl14, rtgl15, rtgl16, rtgl14, rtgl15]
-    const width = images.length / 4 * -100 + 100
+    const width1 = width > 768 ? images.length * 313 : images.length * 180
 
     const [transition, setTransition] = useState(0)
     const [dialog, setDialog] = useState(false)
@@ -36,7 +47,7 @@ function About({setImg, img}) {
 
     const toggle = (element, i) => {
         const array = Array.from(element.parentElement.children)
-        array.forEach((item)=>{
+        array.forEach((item) => {
             item.classList.remove("active3")
         })
         element.classList.add("active3")
@@ -47,7 +58,7 @@ function About({setImg, img}) {
 
     const toggle1 = (element, i) => {
         const array = Array.from(element.parentElement.children)
-        array.forEach((item)=>{
+        array.forEach((item) => {
             item.classList.remove("active2")
         })
         element.classList.add("active2")
@@ -56,11 +67,12 @@ function About({setImg, img}) {
         i === 2 && settext(text3)
     }
 
-    
+ 
+
     return (
         <>
-            {dialog && <Dialog img={img} setDialog={setDialog}/>}
-            <p class="title">
+            {dialog && <Dialog img={img} setDialog={setDialog} />}
+            <p className="title">
                 <span>Главная</span>
                 <span className='flx'>///</span>
                 Каталог ковров
@@ -68,16 +80,14 @@ function About({setImg, img}) {
             <div className='aboutDiv'>
                 <div className="descDiv">
                     <div>
-                        <img src={img} alt="rtgl"
-                            onClick = {()=> setDialog(true)}
-                        />
+                        <img src={img} alt="rtgl" />
                     </div>
                     <div className="model">
                         <div>
                             <Player
-                            playsInline
-                            poster={rtgl3_3}
-                            src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"/>
+                                playsInline
+                                poster={rtgl3_3}
+                                src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
                         </div>
                         <img src={rtgl3_2} alt="rtgl" />
                     </div>
@@ -93,19 +103,19 @@ function About({setImg, img}) {
                         </p>
 
                         <div>
-                        {
-                            sizes.map((siz, i)=> (
-                                <button className={`btn1 ${i === 0 && "active2"}`}
-                                    onClick={(e)=>{
-                                        toggle1(e.target)
-                                    }}>
-                                    {siz}
-                                </button>
-                            ))
-                        }
+                            {
+                                sizes.map((siz, i) => (
+                                    <button key={i} className={`btn1 ${i === 0 ? "active2" : ""}`}
+                                        onClick={(e) => {
+                                            toggle1(e.target)
+                                        }}>
+                                        {siz}
+                                    </button>
+                                ))
+                            }
                         </div>
-                        
-                               
+
+
                         <p className="the">
                             The question isn't who is going to
                             let me. It's who is going to stop me.
@@ -113,7 +123,8 @@ function About({setImg, img}) {
                             If everything seems under control...
                         </p>
                         <div className="flex1">
-                            <button className="btn2">
+                            <button className="btn2"
+                                onClick={() => setDialog(true)}>
                                 Заказать обои
                             </button>
                             <div className="btn3">
@@ -128,13 +139,13 @@ function About({setImg, img}) {
 
                 <div className="orderDesc">
 
-                    {buttons.map((btn, i)=>(
-                        <button className={i === 0 && "active3"}
-                        onClick={(e)=>{toggle(e.target, i)}}>
+                    {buttons.map((btn, i) => (
+                        <button key={i} className={i === 0 ? "active3" : ""}
+                            onClick={(e) => { toggle(e.target, i) }}>
                             {btn}
                         </button>
                     ))}
-                   
+
                 </div>
                 <div className="desctext">
 
@@ -150,34 +161,37 @@ function About({setImg, img}) {
                             Мы реккомендуем
                         </h2>
                         <div className="prew">
-                           <img src={arw} alt="arw"
-                           onClick={()=>transition !== 0 && setTransition(transition+101)}/> 
-                           <img src={arw} alt="arw"
-                           onClick={()=>transition > width && setTransition(transition-101)}/> 
+                            <img src={arw} alt="arw"
+                                onClick={() => transition !== 0 && setTransition(width > 768 ? transition + 626 : transition + 360)} />
+                            <img src={arw} alt="arw"
+                                onClick={() => transition > -width1 + 626 && setTransition(width > 768 ? transition - 626 : transition - 360)} />
                         </div>
                     </div>
 
                     <div className="hidden">
-                        <div className="cardsDiv" style={{transform: `translateX(${transition}%)`}}>
-                            {images.map((image)=>(
-                                <div className="cardDiv2" onClick={()=>setImg(image)}>
-                                <div className="center">
-                                    <img src={image} alt="rtgl"/>
+                        <div className="cardsDiv" style={{ transform: `translateX(${transition}px)` }}>
+                            {images.map((image, i) => (
+                                <div key={i} className="cardDiv2" onClick={() => setImg(image)}>
+                                    <div className="center">
+                                        <img src={image} alt="rtgl" />
+                                    </div>
+                                    <p style={{ fontFamily: "Jost, sans-serif", fontWeight: "500" }}>
+                                        Ковер Electra 8514 серый
+                                    </p>
+                                    <p className="colored" style={{ fontFamily: "Jost, sans-serif", fontWeight: "500" }}>
+                                        от 999 000 сум
+                                    </p>
                                 </div>
-                                <p>
-                                    Ковер Electra 8514 серый
-                                </p>
-                                <p className="colored">
-                                    от 999 000 сум
-                                </p>
-                            </div>
                             ))}
-                            
+
                         </div>
                     </div>
+
+                    
+
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

@@ -19,13 +19,9 @@
     width: 375px;
     height: 500px;
     margin-right: 6px;
-}
-
-.descDiv>div:first-child {
     flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.02);
     text-align: center;
-
 }
 
 .descDiv>div:first-child>img {
@@ -229,6 +225,7 @@ div.video-react video.video-react-video {
 .cardDiv2>div>img {
     width: 300px;
     height: 380px;
+    object-fit: cover;
 }
 
 .orderDesc button {
@@ -236,7 +233,7 @@ div.video-react video.video-react-video {
     padding-left: 20px;
     width: 202px;
     height: 52px;
-    font-family: "Inter", sans-serif;
+    font-family: "Jost", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 16.94px;
@@ -270,11 +267,12 @@ button.active3 {
 }
 
 .desctext p {
-    font-family: "Inter", sans-serif;
+    font-family: "Jost", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 350;
     line-height: 24px;
-    text-align: justify;
+    text-align: left;
+    color: #0F2E4A;
 }
 
 .recommendation {
@@ -314,7 +312,7 @@ button.active3 {
 }
 
 .next h2 {
-    font-family: "Inter", sans-serif;
+    font-family: "Jost", sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -368,9 +366,9 @@ svg.fa-lg {
 }
 
 .lineardiv img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 428px;
+    height: 305px;
+    object-fit: cover;
 }
 
 .lineardiv>div {
@@ -406,55 +404,50 @@ svg.fa-lg {
 }
 
 .form {
-    width: 777px;
+    max-width: 777px;
     height: 600px;
     background-color: #FFF;
     padding-top: 54px;
-    padding-left: 82px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .form h2 {
     margin: 0;
-    color: #0F2E4A;
-    font-family: "Inter", sans-serif;
+    color: #2A1055;
+    font-family: "Jost", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    text-align: center;
 }
 
 .form p {
     margin-top: 8px;
-    margin-bottom: 26px;
-    color: #0F2E4A;
-    font-family: "Inter", sans-serif;
+    margin-bottom: 32px;
+    color: #2A1055;
+    font-family: "Jost", sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
+    text-align: center;
+    opacity: 0.4;
 }
 
-.form label {
-    display: block;
-    margin-top: 16px;
-    color: #0F2E4A;
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-}
 
 .form input {
+    margin-top: 16px;
     display: block;
     padding: 13px 16px;
-    width: 535px;
+    width: 100%;
     height: 44px;
-    border-radius: 3px;
-    border: 1px solid #C9CFD8;
+    border: none;
+    border-bottom: 1px solid #C9CFD8;
     background: #FFF;
-    color: #0F2E4A;
-    font-family: "Inter", sans-serif;
+    color: #2A1055;
+    font-family: "Jost", sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -463,7 +456,7 @@ svg.fa-lg {
 
 .form ::placeholder {
     color: #C9CFD8;
-    font-family: Inter;
+    font-family: "Jost", sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -476,9 +469,9 @@ svg.fa-lg {
     height: 48px;
     background-color: #fff;
     border-radius: 100px;
-    border: 2px solid #BF09DF;
-    color: #BF09DF;
-    font-family: "Inter", sans-serif;
+    border: 2px solid #440398;;
+    color: #440398;;
+    font-family: "Jost", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -503,4 +496,167 @@ svg.fa-lg {
         margin-left: 20px;
         margin-right: 0;
     }
+
+    .form { 
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
+
+@media only screen and (max-width: 768px) {
+    .descDiv>div:first-child, .descDiv>div:first-child img{
+        width: 180px;
+        height: 240px;
+    }
+
+    .model {
+        width: 169px;
+        height: 240px;
+        margin-left: 0;
+    }
+
+    .model>div {
+        margin-bottom: 2px;
+    }
+
+    .model>div, div.video-react div.video-react-poster,
+    div.video-react video.video-react-video {
+        width: 169px;
+        height: 119px;
+    }
+
+    div.video-react button.video-react-big-play-button{
+        left: 66px;
+        top: 40px;
+
+    }
+
+    .model>img:last-child {
+        width: 169px;
+        height: 119px;
+    }
+
+    .descDiv h1 {
+        font-size: 22px;
+        line-height: normal;
+    }
+
+    .descDiv h2 {
+        font-size: 17px;
+        line-height: normal;
+    }
+
+    .razmer {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    .flex1 {
+        margin-top: 22px;
+    }
+
+    .btn2, .btn3 {
+        height: 46px;
+    }
+
+    .orderDesc {
+        margin-top: 54px;
+    }
+
+    .orderDesc button {
+        width: auto;
+        padding: 16px 4px;
+        text-align: center;
+    }
+
+    .desctext {
+        padding: 12px 20px;
+        padding-bottom: 44px;
+    }
+
+    button.active3 {
+        border-bottom: none;
+    }
+
+    .recommendation {
+        margin-top: 40px;
+    }
+
+    .next h2 {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .cardsDiv {
+        margin-bottom: 192px;
+    }
+
+    .cardDiv2 {
+        margin-right: 9px;
+    }
+
+    .cardDiv2 > div {
+        border: 1px solid #E7E6EF;
+    }
+
+    .cardDiv2 > div, .cardDiv2 > div > img {
+        width: 171px;
+        height: 218px;
+        border-radius: 6px;
+    }
+
+    .dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 100vh; /* Set maximum height to 90% of viewport height */
+        overflow-y: auto;
+    }
+
+    .dialog>div {
+        padding-top: 50px;
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: auto;
+        width: auto;
+    }
+
+    .lineardiv {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 341px;
+        height: 358px;
+        background-image: linear-gradient(to top, #fff 30%, #BF08DF);
+    }
+
+    .lineardiv > div{
+        width: 341px;
+        height: 358px;
+        padding: 50px 20px;
+    }
+
+
+    .lineardiv img {
+        width: 341px;
+        height: 358px;
+    }
+
+    .form {
+        padding-left: 11px;
+        padding-right: 11px;
+        width: 341px;
+        height: 531px;
+    }
+
+    .form button {
+        width: 319px;
+        height: 60px;
+    }
+
+    .close {
+        top: 0;
+        right: 0;
+    }
+
+}   

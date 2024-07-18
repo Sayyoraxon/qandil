@@ -55,7 +55,7 @@ function OutletCatalog({ setImg }) {
                     </h1>
 
                     {buttons.map((item, i) => (
-                        <button className={i === 0 && "active1"}
+                        <button key={i} className={i === 0 ? "active1" : ""}
                             onClick={(e) => {
                                 setText(item)
                                 toggle(e.target)

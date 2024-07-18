@@ -3,14 +3,15 @@ import { useLocation } from 'react-router-dom'
 import Home from '../pages/Home'
 import Navbar from '../components/Navbar'
 
-function Layout() {
+function Layout({display, setDisplay}) {
 
     const path = useLocation().pathname
     
     
   return (
     <>
-        {path  === "/" ? <Home/> : <Navbar/>}
+        {path  === "/" ? <Home display={display} setDisplay={setDisplay}/> 
+        : <Navbar display={display} setDisplay={setDisplay}/>}
     </>
   )
 }

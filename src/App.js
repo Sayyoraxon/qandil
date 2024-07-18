@@ -11,12 +11,13 @@ import Contact from './pages/Contacs/Contact';
 function App() {
 
   const [img, setImg] = useState()
+  const [display, setDisplay] = useState("none")
 
 
   const routes = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={<Layout />}>
-        <Route index element={<Main setImg={setImg}/>} />
+      <Route element={<Layout display={display} setDisplay={setDisplay}/>}>
+        <Route index element={<Main setImg={setImg} display={display} setDisplay={setDisplay}/>} />
         <Route path="catalog" element={<Catalog setImg={setImg}/>} />
         <Route path="about" element={<About setImg={setImg} img={img}/>} />
         <Route path="contacts" element={<Contact/>}/>

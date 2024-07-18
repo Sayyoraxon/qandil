@@ -2,7 +2,7 @@ import React from 'react'
 import "./style.css"
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faInstagram, faLinkedin, faLinkedinIn, faSquareFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faLinkedinIn, faSquareFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
      return (

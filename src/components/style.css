@@ -257,6 +257,58 @@ p.outfit {
    margin-right: 0;
 }
 
+.mobile {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #FFF;
+   z-index: 7;
+   text-align: center;
+}
+
+.mobile img {
+   width: 38px;
+   height: 38px;
+   position: relative;
+   top: 39px;
+   left: 170px;
+}
+
+.mobnavDiv {
+   margin-top: 60px;
+}
+
+a.mobnav, .mobile p {
+   display: block;
+   color: #091A2A;
+   font-family: "Inter", sans-serif;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+   text-decoration: none;
+   margin-top: 30px;
+}
+
+.mobile a:hover {
+   opacity: 0.3;
+}
+
+.mobile>div:last-child {
+   margin-top: 30px;
+   width: 162px;
+   height: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+
 
 
 
@@ -268,7 +320,8 @@ p.outfit {
    }
 
    .container3,
-   .footer, .catalogHeader {
+   .footer,
+   .catalogHeader {
       width: 100%;
    }
 
@@ -281,7 +334,7 @@ p.outfit {
 
    .flexrow {
       margin-top: 20px;
-      margin-bottom:6px;
+      margin-bottom: 6px;
    }
 
    .show {
@@ -291,11 +344,12 @@ p.outfit {
 }
 
 @media only screen and (max-width: 900px) {
-   .catalogHeader{
+   .catalogHeader {
       padding: 0 12px;
    }
 
-   .p, .none730,
+   .p,
+   .none730,
    .catalogHeader>div:first-child {
       display: none;
    }
@@ -331,12 +385,12 @@ p.outfit {
    }
 
    .container3 p {
-     margin: 0;
-     margin-right: 20px;
+      margin: 0;
+      margin-right: 20px;
    }
 
    .flexfooter>div {
-      width: 50%; 
+      width: 50%;
    }
 
    .flexfooter p:first-child {

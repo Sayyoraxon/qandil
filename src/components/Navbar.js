@@ -5,8 +5,9 @@ import vector from "../pages/images/Vector.svg"
 import logoMobile from "../pages/images/logoMobila.svg"
 import { NavLink, Outlet, useNavigate } from "react-router-dom"
 import "./style.css"
+import MobileNav from "./MobileNav"
 
-function Navbar() {
+function Navbar({display, setDisplay}) {
 
     const navigate = useNavigate()
 
@@ -15,6 +16,7 @@ function Navbar() {
     }
     return (
         <>
+        <MobileNav display={display} setDisplay={setDisplay} catalog="Каталог продуктов"/>
         <div className="catalogHeader">
             <div>
                 <div>
@@ -42,7 +44,8 @@ function Navbar() {
                     +998 90 000 00 00
                 </p>
             </div>
-            <img src={bars} alt="bars" className="menuDark"/>
+            <img src={bars} alt="bars" className="menuDark"
+            onClick={()=>setDisplay("block")}/>
         </div>
         <Outlet/>
         </>

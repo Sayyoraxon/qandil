@@ -11,12 +11,14 @@ import ellipc4 from "./images/Ellipse 4.png"
 import ellipc5 from "./images/Ellipse 5.png"
 import ellipc6 from "./images/Ellipse 6.png"
 import bars from "./images/bars.svg"
+import MobileNav from '../components/MobileNav'
 
-function Home() {
+function Home({display, setDisplay}) {
 
 
      return (
-          <>
+          <>   
+               <MobileNav display={display} setDisplay={setDisplay}/>
                <div className="background1">
                     <div className="backfon">
                          <div className="fontop">
@@ -49,7 +51,8 @@ function Home() {
                               <button className="hug right abs6 none">
                                    Получить консултацию
                               </button>
-                              <img src={bars} alt="bars" className='block'/>
+                              <img src={bars} alt="bars" className='block'
+                              onClick={()=>setDisplay("block")}/>
                          </div>
 
                          <div className="main">

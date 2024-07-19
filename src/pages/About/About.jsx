@@ -81,15 +81,15 @@ function About({ setImg, img }) {
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
-          {
-            breakpoint: 500,
-            settings: {
-              slidesToShow: 2.05,
-              slidesToScroll: 2
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
             }
-          }
         ]
-      };
+    };
 
 
 
@@ -189,24 +189,6 @@ function About({ setImg, img }) {
                 </div>
 
 
-                <Slider {...settings}>
-                {images.map((image, i) => (
-                                <div key={i} className="cardDiv2" onClick={() => setImg(image)}>
-                                    <div className="center">
-                                        <img src={image} alt="rtgl" />
-                                    </div>
-                                    <p style={{ fontFamily: "Jost, sans-serif", fontWeight: "500" }}>
-                                        Ковер Electra 8514 серый
-                                    </p>
-                                    <p className="colored" style={{ fontFamily: "Jost, sans-serif", fontWeight: "500" }}>
-                                        от 999 000 сум
-                                    </p>
-                                </div>
-                            ))}
-                </Slider>
-
-
-
                 <div className="recommendation">
                     <div className="next">
                         <h2>
@@ -224,7 +206,7 @@ function About({ setImg, img }) {
                         <div className="cardsDiv" style={{ transform: `translateX(${transition}px)` }}>
                             {images.map((image, i) => (
                                 <div key={i} className="cardDiv2" onClick={() => setImg(image)}
-                                onMouseMove={()=>{alert("scroll")}}>
+                                    onMouseMove={() => { alert("scroll") }}>
                                     <div className="center">
                                         <img src={image} alt="rtgl" />
                                     </div>
@@ -236,8 +218,25 @@ function About({ setImg, img }) {
                                     </p>
                                 </div>
                             ))}
-
                         </div>
+                    </div>
+
+                    <div className="slider">
+                        <Slider {...settings}>
+                            {images.map((image, i) => (
+                                <div key={i} className="cardDiv2" onClick={() => setImg(image)}>
+                                    <div className="center">
+                                        <img src={image} alt="rtgl" />
+                                    </div>
+                                    <p style={{ fontFamily: "Jost, sans-serif", fontWeight: "500" }}>
+                                        Ковер Electra 8514 серый
+                                    </p>
+                                    <p className="colored" style={{ fontFamily: "Jost, sans-serif", fontWeight: "500" }}>
+                                        от 999 000 сум
+                                    </p>
+                                </div>
+                            ))}
+                        </Slider>
                     </div>
 
 

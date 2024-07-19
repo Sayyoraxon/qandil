@@ -80,21 +80,11 @@ function About({ setImg, img }) {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow: <CustomPrevArrow />,
-        nextArrow: <CustomNextArrow />,
         responsive: [
           {
-            breakpoint: 1000,
+            breakpoint: 500,
             settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              infinite: true
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 4,
+              slidesToShow: 2,
               slidesToScroll: 1
             }
           }
@@ -234,7 +224,7 @@ function About({ setImg, img }) {
                         <div className="cardsDiv" style={{ transform: `translateX(${transition}px)` }}>
                             {images.map((image, i) => (
                                 <div key={i} className="cardDiv2" onClick={() => setImg(image)}
-                                onScroll={()=>{alert("scroll")}}>
+                                onMouseMove={()=>{alert("scroll")}}>
                                     <div className="center">
                                         <img src={image} alt="rtgl" />
                                     </div>

@@ -384,10 +384,12 @@ p.colored {
 @media only screen and (max-width: 768px) {
    .div1 {
       height: 1350px;
+      margin-left: -10px;
    }
 
    .div1card {
       width: 171px;
+      margin-left: 10px;
    }
 
    .div1card>div {

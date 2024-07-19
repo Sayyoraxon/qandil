@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import "./Main.css"
 import icons1 from "../images/Icons4.svg"
 import icons2 from "../images/Icons1.svg"
@@ -9,9 +10,7 @@ import Lamps from "./Lamps"
 import Footer from "../../components/Footer"
 import { useNavigate } from "react-router-dom"
 
-
-function Main({ setImg }) {
-
+const Main = ({ setImg }) => {
      const buttons = [
           "Люстры",
           "Светильники потолочные",
@@ -38,7 +37,6 @@ function Main({ setImg }) {
      const naviget = () => {
           navigate("catalog", {replace: true})
      }
-
 
      return (
           <>
@@ -73,9 +71,9 @@ function Main({ setImg }) {
                               
                          </div>
                          <Lamps setImg={setImg}/>
-                         <button className="text2" onClick={naviget}>
+                         <a href='catalog/#catalog' className="text2" >
                               Посмотреть все
-                         </button>
+                         </a>
                     </div>
                </div>
                <div className="background3">

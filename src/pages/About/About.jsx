@@ -29,7 +29,7 @@ import { CustomNextArrow } from "./CustomNextArrow"
 
 function About({ setImg, img }) {
 
-
+    window.scrollTo({ top: 0});
 
     const { width } = useWindowDimensions()
 

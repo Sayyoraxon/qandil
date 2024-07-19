@@ -32,7 +32,7 @@ function Chandeliers({ setImg }) {
 
     return (
         <div className="width925">
-            <div className='scroll' style={{height: height1 ? "330px" : "100px"}}>
+            <div className='scroll' style={{height: height1 ? "330px" : "130px"}}>
                 <div className="catalogmenunav">
                     <div className='menudiv'>
                         <p>

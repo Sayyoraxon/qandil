@@ -8,6 +8,7 @@ import group1 from "../images/Group1.svg"
 import group2 from "../images/Group2.svg"
 import Lamps from "./Lamps"
 import Footer from "../../components/Footer"
+import { useNavigate } from "react-router-dom"
 
 const Main = ({ setImg }) => {
      const buttons = [
@@ -25,13 +26,19 @@ const Main = ({ setImg }) => {
 
      const toggle = (element) => {
           const btns = Array.from(element.parentElement.children)
-          btns.forEach((item)=>{
+          btns.forEach((item) => {
                item.classList.remove("active")
           })
           element.classList.add("active")
      }
 
-   
+     const navigate = useNavigate()
+
+     const naviget = () => {
+          navigate("catalog");
+          window.scrollTo({ top: 0 });
+
+     }
 
      return (
           <>
@@ -42,33 +49,33 @@ const Main = ({ setImg }) => {
                               Наше новые продукты
                          </h1>
                          <div className="menuDiv">
-                              {buttons.map((btn)=>(
+                              {buttons.map((btn) => (
                                    btn === "Лампы" ?
-                                   <button className="active" onClick={(e) => {
-                                        toggle(e.target)
-                                   }}>
-                                       {btn} 
-                                   </button> 
-                                   :
-                                   btn === "Торшеры" ?
-                                   <button className="mgr" onClick={(e) => {
-                                        toggle(e.target)
-                                   }}>
-                                       {btn} 
-                                   </button> 
-                                   :
-                                   <button  onClick={(e) => {
-                                        toggle(e.target)
-                                   }}>
-                                       {btn} 
-                                   </button>
+                                        <button className="active" onClick={(e) => {
+                                             toggle(e.target)
+                                        }}>
+                                             {btn}
+                                        </button>
+                                        :
+                                        btn === "Торшеры" ?
+                                             <button className="mgr" onClick={(e) => {
+                                                  toggle(e.target)
+                                             }}>
+                                                  {btn}
+                                             </button>
+                                             :
+                                             <button onClick={(e) => {
+                                                  toggle(e.target)
+                                             }}>
+                                                  {btn}
+                                             </button>
                               ))}
-                              
+
                          </div>
-                         <Lamps setImg={setImg}/>
-                         <a href='catalog/#catalog' className="text2" >
+                         <Lamps setImg={setImg} />
+                         <button className="text2" onClick={naviget}>
                               Посмотреть все
-                         </a>
+                         </button>
                     </div>
                </div>
                <div className="background3">
@@ -126,7 +133,7 @@ const Main = ({ setImg }) => {
                                    <input type="text" placeholder="Имя" />
                                    <input type="text" placeholder="место заказа" />
                                    <input type="tel" defaultValue="+998" />
-                                   
+
                                    <button className="text5">
 
                                         Отправить для обратного звонка
@@ -141,7 +148,7 @@ const Main = ({ setImg }) => {
                          </div>
                     </div>
                </div>
-               <Footer/>
+               <Footer />
           </>
      )
 }

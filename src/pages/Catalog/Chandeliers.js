@@ -28,6 +28,7 @@ function Chandeliers({ setImg }) {
 
     const naviget = () => {
         navigate("/about", { replace: true })
+        window.scrollTo({ top: 0 });
     }
 
     return (

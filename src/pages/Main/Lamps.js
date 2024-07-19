@@ -14,7 +14,7 @@ function Lamps({setImg}) {
     const navigate = useNavigate()
 
     const naviget  = () => {
-        navigate("about#about", {replace: true})
+        navigate("about#about")
     }
     return (
         <div className="katalogDiv">

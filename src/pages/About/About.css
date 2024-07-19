@@ -680,12 +680,8 @@ svg.fa-lg {
 
 
 @media only screen and (max-width: 500px) {
-    .hidden {
+    .hidden, .prew {
         display: none;
-    }
-
-    .prew {
-        visibility: hidden;
     }
 
     .slider {

@@ -84,8 +84,8 @@ function About({ setImg, img }) {
           {
             breakpoint: 500,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
+              slidesToShow: 2.05,
+              slidesToScroll: 2
             }
           }
         ]

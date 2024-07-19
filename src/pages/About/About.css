@@ -609,7 +609,9 @@ svg.fa-lg {
         margin-bottom: 192px;
     }
 
-
+    .cardDiv2 {
+        margin-right: 0;
+    }
 
     .cardDiv2 > div {
         border: 1px solid #E7E6EF;

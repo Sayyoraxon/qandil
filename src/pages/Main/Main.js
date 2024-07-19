@@ -8,7 +8,6 @@ import group1 from "../images/Group1.svg"
 import group2 from "../images/Group2.svg"
 import Lamps from "./Lamps"
 import Footer from "../../components/Footer"
-import { useNavigate } from "react-router-dom"
 
 const Main = ({ setImg }) => {
      const buttons = [
@@ -32,11 +31,7 @@ const Main = ({ setImg }) => {
           element.classList.add("active")
      }
 
-     const navigate = useNavigate()
-
-     const naviget = () => {
-          navigate("catalog", {replace: true})
-     }
+   
 
      return (
           <>

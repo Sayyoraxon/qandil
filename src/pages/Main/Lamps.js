@@ -14,7 +14,8 @@ function Lamps({setImg}) {
     const navigate = useNavigate()
 
     const naviget  = () => {
-        navigate("about#about")
+        navigate("about")
+        window.scrollTo({ top: 0 });
     }
     return (
         <div className="katalogDiv">

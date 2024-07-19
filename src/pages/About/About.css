@@ -607,10 +607,12 @@ svg.fa-lg {
 
     .cardsDiv {
         margin-bottom: 192px;
+        margin-left: -8px;
     }
 
     .cardDiv2 {
         margin-right: 0;
+        margin-left: 8px;
     }
 
     .cardDiv2 > div {
@@ -685,6 +687,8 @@ svg.fa-lg {
     }
 
     .slider {
+        width: 100%;
+        overflow: hidden;
         display: block;
     }
 }

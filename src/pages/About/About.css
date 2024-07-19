@@ -493,6 +493,7 @@ svg.fa-lg {
 }
 
 .slider {
+    margin-left: 6px;
     margin-top: 26px;
     margin-bottom: 200px;
     display: none;

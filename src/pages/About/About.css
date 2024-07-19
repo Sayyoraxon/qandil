@@ -354,6 +354,7 @@ button.active3 {
     padding: 0;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 8;
 }
 
 svg.fa-lg {
@@ -362,6 +363,7 @@ svg.fa-lg {
 }
 
 .dialog>div {
+    position: relative;
     padding: 10px;
     width: 1240px;
     height: 620px;
@@ -369,6 +371,7 @@ svg.fa-lg {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 7;
 }
 
 .lineardiv {

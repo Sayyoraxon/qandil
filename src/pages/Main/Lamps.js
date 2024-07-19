@@ -9,12 +9,12 @@ import ret7 from "../images/Rectangle 7.png"
 import ret8 from "../images/Rectangle 8.png"
 import { useNavigate } from 'react-router-dom'
 
-function Lamps({setImg, height}) {
+function Lamps({setImg}) {
 
     const navigate = useNavigate()
 
     const naviget  = () => {
-        navigate("about", {replace: true})
+        navigate("about#about", {replace: true})
     }
     return (
         <div className="katalogDiv">

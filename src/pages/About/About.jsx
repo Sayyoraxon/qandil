@@ -109,7 +109,7 @@ function About({ setImg, img }) {
                 <span className='flx'>///</span>
                 Каталог ковров
             </p>
-            <div className='aboutDiv'>
+            <div className='aboutDiv' id="about">
                 <div className="descDiv">
                     <div>
                         <img src={img} alt="rtgl" />

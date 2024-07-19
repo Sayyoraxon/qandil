@@ -6,13 +6,11 @@ import group from "../images/Group.svg"
 import group1 from "../images/Group1.svg"
 import group2 from "../images/Group2.svg"
 import Lamps from "./Lamps"
-import { useState } from "react"
 import Footer from "../../components/Footer"
+import { useNavigate } from "react-router-dom"
 
 
 function Main({ setImg }) {
-
-     const [height, setHeight] = useState("")
 
      const buttons = [
           "Люстры",
@@ -33,6 +31,12 @@ function Main({ setImg }) {
                item.classList.remove("active")
           })
           element.classList.add("active")
+     }
+
+     const navigate = useNavigate()
+
+     const naviget = () => {
+          navigate("catalog", {replace: true})
      }
 
 
@@ -68,10 +72,10 @@ function Main({ setImg }) {
                               ))}
                               
                          </div>
-                         <Lamps setImg={setImg} height={height}/>
-                         {height !== "auto" && <button className="text2" onClick={()=>setHeight("auto")}>
+                         <Lamps setImg={setImg}/>
+                         <button className="text2" onClick={naviget}>
                               Посмотреть все
-                         </button>}
+                         </button>
                     </div>
                </div>
                <div className="background3">

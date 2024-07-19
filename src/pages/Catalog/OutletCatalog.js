@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Chandeliers from './Chandeliers'
 import menu from "../images/Icons/layout-list.svg"
 import close from "../images/closeIcon.svg"
+import arrow from "../images/Icons.svg"
 
 function OutletCatalog({ setImg }) {
 
@@ -18,8 +19,9 @@ function OutletCatalog({ setImg }) {
         "Акции"
     ]
 
-    const [text, setText] = useState(buttons[0])
+    const [text, setText] = useState("Каталог")
     const [position, setPositon] = useState(false)
+    const [bgcolor, setBgcolor] = useState(false)
 
     const toggle = (element) => {
         const btns = Array.from(element.parentElement.children)
@@ -27,6 +29,7 @@ function OutletCatalog({ setImg }) {
             btn.classList.remove("active1")
         })
         element.classList.add("active1")
+        setBgcolor(true)
     }
 
     return (
@@ -37,15 +40,18 @@ function OutletCatalog({ setImg }) {
                     <span className='flx'>///</span>
                     Каталог люстр
                 </p>
-                <div className='blockDiv'>
+                <div className='blockDiv' style={{backgroundColor: bgcolor ? "" : "#fff", border: !bgcolor && "1px solid #eee"}}>
                     <div className='flex'>
-                        <img src={menu} alt="icon" 
-                        onClick={()=>setPositon(true)}/>
+                        <img src={menu} alt="icon" />
                         <p>{text}</p>
                     </div>
+                    {!position && 
+                    <img src={arrow} alt="arrow"
+                    onClick={()=>setPositon(true)}/>}
+                    {position &&
                     <img src={close} alt="icon"
                         onClick={() => { setPositon(false) }}
-                    />
+                    />}
                 </div>
                 <div className='noneDiv' 
                 style={{ position: position && "absolute", display: position && "block",
@@ -55,7 +61,7 @@ function OutletCatalog({ setImg }) {
                     </h1>
 
                     {buttons.map((item, i) => (
-                        <button key={i} className={i === 0 ? "active1" : ""}
+                        <button key={i}
                             onClick={(e) => {
                                 setText(item)
                                 toggle(e.target)

@@ -17,7 +17,7 @@ function Lamps({setImg, height}) {
         navigate("about", {replace: true})
     }
     return (
-        <div className="katalogDiv" style={{height: height}}>
+        <div className="katalogDiv">
             <div className="card" onClick={()=>{
                 setImg(ret1)
                 naviget()
@@ -186,118 +186,7 @@ function Lamps({setImg, height}) {
                     от 999 000 сум
                 </p>
             </div>
-            <div className="card" onClick={()=>{
-                setImg(ret1)
-                naviget()
-            }}>
-                <div className="center">
-                    <img src={ret1} alt="rtgl" />
-                </div>
-                <p>
-                    Ковер Electra 8514 серый
-                </p>
-                <p className="sum">
-                    от 999 000 сум
-                </p>
-            </div>
-            <div className="card" onClick={()=>{
-                setImg(ret2)
-                naviget()
-            }}>
-                <div className="center">
-                    <img src={ret2} alt="rtgl" />
-                </div>
-                <p>
-                    Ковер Electra 8514 серый
-                </p>
-                <p className="sum">
-                    от 999 000 сум
-                </p>
-            </div>
-            <div className="card" onClick={()=>{
-                setImg(ret3)
-                naviget()
-            }}>
-                <div>
-                    <img src={ret3} alt="rtgl" />
-                </div>
-                <p>
-                    Ковер Electra 8514 серый
-                </p>
-                <p className="sum">
-                    от 999 000 сум
-                </p>
-            </div>
-            <div className="card" onClick={()=>{
-                setImg(ret4)
-                naviget()
-            }}>
-                <div>
-                    <img src={ret4} alt="rtgl" />
-                </div>
-                <p>
-                    Ковер Electra 8514 серый
-                </p>
-                <p className="sum">
-                    от 999 000 сум
-                </p>
-            </div>
-            <div className="card" onClick={()=>{
-                setImg(ret5)
-                naviget()
-            }}>
-                <div className="center">
-                    <img src={ret5} alt="rtgl" />
-                </div>
-                <p>
-                    Ковер Electra 8514 серый
-                </p>
-                <p className="sum">
-                    от 999 000 сум
-                </p>
-            </div>
-            <div className="card" onClick={()=>{
-                setImg(ret6)
-                naviget()
-            }}>
-                <div>
-                    <img src={ret6} alt="rtgl" />
-                </div>
-                <p>
-                    Ковер Electra 8514 серый
-                </p>
-                <p className="sum">
-                    от 999 000 сум
-                </p>
-            </div>
-            <div className="card" onClick={()=>{
-                setImg(ret7)
-                naviget()
-            }}>
-                <div>
-                    <img src={ret7} alt="rtgl" />
-                </div>
-                <p>
-                    Ковер Electra 8514 серый
-                </p>
-                <p className="sum">
-                    от 999 000 сум
-                </p>
-            </div>
-            <div className="card" onClick={()=>{
-                setImg(ret1)
-                naviget()
-            }}>
-                <div className="center">
-                    <img src={ret1} alt="rtgl" />
-                </div>
-                <p>
-                    Ковер Electra 8514 серый
-                </p>
-                <p className="sum">
-                    от 999 000 сум
-                </p>
-            </div>
+
         </div>
     )
 }

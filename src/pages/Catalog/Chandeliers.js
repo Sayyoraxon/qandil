@@ -22,6 +22,7 @@ function Chandeliers({ setImg }) {
     const [style, setStyle] = useState(false)
     const [form, setForm] = useState(false)
     const [compound, setCompound] = useState(false)
+    const [height1, setHeight1] = useState(false)
 
     const navigate = useNavigate()
 
@@ -31,14 +32,17 @@ function Chandeliers({ setImg }) {
 
     return (
         <div className="width925">
-            <div className='scroll'>
+            <div className='scroll' style={{height: height1 ? "330px" : "100px"}}>
                 <div className="catalogmenunav">
                     <div className='menudiv'>
                         <p>
                             По размерам
                         </p>
                         <img src={icons} alt="icon"
-                            onClick={() => setSize(!size)} />
+                            onClick={() => {
+                                setSize(!size)
+                                setHeight1(true)
+                                }} />
                         {size &&
                             <div>
                                 <p>
@@ -57,7 +61,10 @@ function Chandeliers({ setImg }) {
                             По цвету
                         </p>
                         <img src={icons} alt="icon"
-                            onClick={() => setColor(!color)} />
+                            onClick={() =>{ 
+                                setColor(!color)
+                                setHeight1(true)
+                                }} />
                         {color &&
                             <div>
                                 <p>
@@ -76,7 +83,10 @@ function Chandeliers({ setImg }) {
                             По стилю
                         </p>
                         <img src={icons} alt="icon"
-                            onClick={() => setStyle(!style)} />
+                            onClick={() => {
+                                setStyle(!style)
+                                setHeight1(true)
+                                }} />
                         {style &&
                             <div>
                                 <p>
@@ -95,7 +105,10 @@ function Chandeliers({ setImg }) {
                             По форме
                         </p>
                         <img src={icons} alt="icon"
-                            onClick={() => setForm(!form)} />
+                            onClick={() => {
+                                setForm(!form)
+                                setHeight1(true)
+                                }} />
                         {form &&
                             <div>
                                 <p>
@@ -114,7 +127,10 @@ function Chandeliers({ setImg }) {
                             По составу
                         </p>
                         <img src={icons} alt="icon"
-                            onClick={() => setCompound(!compound)} />
+                            onClick={() => {
+                                setCompound(!compound)
+                                setHeight1(true)
+                                }} />
                         {compound &&
                             <div>
                                 <p>

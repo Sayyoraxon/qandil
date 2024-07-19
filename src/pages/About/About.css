@@ -37,39 +37,52 @@
 }
 
 .model>div {
+    position: relative;
     width: 351px;
     height: 247px;
     margin-bottom: 6px;
 }
 
-div.video-react button.video-react-big-play-button {
-    font-size: 2.5em;
-    top: 100px;
-    left: 160px;
+.model>div>img {
+    width: 351px;
+    height: 247px;
+    object-fit: cover;
+}
+
+.play-button {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 42px;
     height: 42px;
+    background-color: #fff;
+    border: 2px solid #fff; /* Border color */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
     border-radius: 50%;
-    background-color: #fff;
-    color: #000;
-}
+  }
+  
+  /* Play icon styles */
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 17.3px; /* Adjust this value to change the size of the play icon */
+    border-color: transparent transparent transparent #000; /* Adjust color to match button */
+  }
 
-div.video-react:hover button.video-react-big-play-button {
-    background-color: #fff;
-}
-
-div.video-react div.video-react-poster {
-    width: 351px;
-    height: 247px;
-    background-size: cover;
-    background-origin: border-box;
-    background-color: rgba(0, 0, 0, 0.02);
-}
-
-div.video-react video.video-react-video {
-    background-color: #fff;
-    width: 351px;
-    height: 247px;
-}
+  video {
+    max-width: 900px;
+  }
 
 .model>img:last-child {
     width: 351px;
@@ -320,7 +333,7 @@ button.active3 {
     margin-bottom: 0;
 }
 
-.dialog {
+.dialog, .dialog1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -519,8 +532,7 @@ svg.fa-lg {
         margin-bottom: 2px;
     }
 
-    .model>div, div.video-react div.video-react-poster,
-    div.video-react video.video-react-video {
+    .model>div, .model>div>img{
         width: 169px;
         height: 119px;
     }
@@ -625,28 +637,26 @@ svg.fa-lg {
     .lineardiv {
         margin-top: 10px;
         margin-bottom: 5px;
-        width: 341px;
-        height: 358px;
+        width: 100%;
         background-image: linear-gradient(to top, #fff 30%, #BF08DF);
     }
 
     .lineardiv > div{
-        width: 341px;
-        height: 358px;
+        width: 100%;
+        height: auto;
         padding: 50px 20px;
     }
 
 
     .lineardiv img {
         width: 100%;
-        height: 100%;
         object-fit: contain;
     }
 
     .form {
         padding-left: 11px;
         padding-right: 11px;
-        width: 341px;
+        max-width: 600px;
         height: 531px;
     }
 

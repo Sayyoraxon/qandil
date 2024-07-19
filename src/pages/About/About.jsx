@@ -1,5 +1,4 @@
 import "./About.css"
-import "../../../node_modules/video-react/dist/video-react.css"
 import rtgl3_3 from "../images/Rectangle 3_3.png"
 import rtgl3_2 from "../images/Rectangle 3_2.png"
 import rtgl13 from "../images/Rectangle_13.png"
@@ -9,10 +8,18 @@ import rtgl16 from "../images/Rectangle_16.png"
 import share from "../images/Icons/share.svg"
 import arw from "../images/Icons.svg"
 import { useState } from "react"
-import { Player } from "video-react"
 import Dialog from "./Dialog"
 import Footer from "../../components/Footer"
 import useWindowDimensions from "./useWindowDimensions"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
+
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { CustomPrevArrow } from "./CustomPrewArrow"
+import { CustomNextArrow } from "./CustomNextArrow"
+
 
 
 
@@ -32,6 +39,7 @@ function About({ setImg, img }) {
 
     const [transition, setTransition] = useState(0)
     const [dialog, setDialog] = useState(false)
+    const [dialog1, setDialog1] = useState(false)
 
     const buttons = [
         "Описание продукта",
@@ -67,11 +75,46 @@ function About({ setImg, img }) {
         i === 2 && settext(text3)
     }
 
- 
+    const settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />,
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              infinite: true
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
+
+
 
     return (
         <>
             {dialog && <Dialog img={img} setDialog={setDialog} />}
+            {dialog1 &&
+                <div className='dialog1'>
+                    <button className='close' onClick={() => setDialog1(false)}>
+                        <FontAwesomeIcon icon={faCircleXmark} size='lg' />
+                    </button>
+                    <video controls width="100%"
+                        src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+                    />
+                </div>}
             <p className="title">
                 <span>Главная</span>
                 <span className='flx'>///</span>
@@ -84,10 +127,10 @@ function About({ setImg, img }) {
                     </div>
                     <div className="model">
                         <div>
-                            <Player
-                                playsInline
-                                poster={rtgl3_3}
-                                src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
+                            <img src={rtgl3_3} alt="img" />
+                            <button className="play-button" onClick={() => setDialog1(true)}>
+                                <span className="play-icon"></span>
+                            </button>
                         </div>
                         <img src={rtgl3_2} alt="rtgl" />
                     </div>
@@ -155,6 +198,25 @@ function About({ setImg, img }) {
 
                 </div>
 
+
+                <Slider {...settings}>
+                {images.map((image, i) => (
+                                <div key={i} className="cardDiv2" onClick={() => setImg(image)}>
+                                    <div className="center">
+                                        <img src={image} alt="rtgl" />
+                                    </div>
+                                    <p style={{ fontFamily: "Jost, sans-serif", fontWeight: "500" }}>
+                                        Ковер Electra 8514 серый
+                                    </p>
+                                    <p className="colored" style={{ fontFamily: "Jost, sans-serif", fontWeight: "500" }}>
+                                        от 999 000 сум
+                                    </p>
+                                </div>
+                            ))}
+                </Slider>
+
+
+
                 <div className="recommendation">
                     <div className="next">
                         <h2>
@@ -171,7 +233,8 @@ function About({ setImg, img }) {
                     <div className="hidden">
                         <div className="cardsDiv" style={{ transform: `translateX(${transition}px)` }}>
                             {images.map((image, i) => (
-                                <div key={i} className="cardDiv2" onClick={() => setImg(image)}>
+                                <div key={i} className="cardDiv2" onClick={() => setImg(image)}
+                                onScroll={()=>{alert("scroll")}}>
                                     <div className="center">
                                         <img src={image} alt="rtgl" />
                                     </div>
@@ -187,7 +250,7 @@ function About({ setImg, img }) {
                         </div>
                     </div>
 
-                    
+
 
                 </div>
             </div>

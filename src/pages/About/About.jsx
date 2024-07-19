@@ -156,7 +156,7 @@ function About({ setImg, img }) {
                         </p>
                         <div className="flex1">
                             <button className="btn2"
-                                onClick={() => setDialog(true)}>
+                                onClick={() =>{ setDialog(true)}}>
                                 Заказать обои
                             </button>
                             <div className="btn3">

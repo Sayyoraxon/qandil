@@ -205,8 +205,7 @@ function About({ setImg, img }) {
                     <div className="hidden">
                         <div className="cardsDiv" style={{ transform: `translateX(${transition}px)` }}>
                             {images.map((image, i) => (
-                                <div key={i} className="cardDiv2" onClick={() => setImg(image)}
-                                    onMouseMove={() => { alert("scroll") }}>
+                                <div key={i} className="cardDiv2" onClick={() => setImg(image)}>
                                     <div className="center">
                                         <img src={image} alt="rtgl" />
                                     </div>
